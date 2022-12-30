@@ -16,6 +16,10 @@ static void	push_subfunc(t_staccontent **push, \
 t_staccontent *newcontent, t_staccontent **inserted)
 {
 	newcontent->num = (*push)->num;
+	if ((*push)->sorted == true)
+		newcontent->sorted = true;
+	else
+		newcontent->sorted = false;
 	newcontent->next = (*inserted);
 	newcontent->prev = (*inserted)->prev;
 	(*inserted)->prev = newcontent;

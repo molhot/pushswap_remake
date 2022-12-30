@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 04:03:23 by satushi           #+#    #+#             */
-/*   Updated: 2022/12/30 08:54:28 by satushi          ###   ########.fr       */
+/*   Updated: 2022/12/31 00:16:57 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,34 +15,53 @@
 void quick_sort_main(t_staccontent **a, t_staccontent **b)
 {
 	int		b_len;
-	bool	wedge_is_exist;
 
 	quicksort_firststep(a, b);
-	divide_less_six(a, b);
 	b_len = grasp_listlen(b);
-	if (b_len <= 3)
+	while (b_len > 6)
+	{
+		divide_less_six(a, b);
+		b_len = grasp_listlen(b);
+	}
+	if (b_len <= 3)// bの6以下の際の対応方法、かつ3以下
 		less_threenum(a, b);
-	else
+	else// bの6以下、かつ3より大きい
 	{
 		while (b_len > 3)
 		{
 			more_threenum(a, b, mediam(b));
 			b_len = grasp_listlen(b);
 		}
-		wedge_is_exist = wedge_in_a(a);
-		while (wedge_is_exist == true)
-		{
-			sort_to_wedge(a, b);
-			wedge_is_exist = wedge_in_a(a);
-		}
+		// wedge_is_exist = wedge_in_a(a);
+		// while (wedge_is_exist == true)//aのなかにwedgeがあれば処理を繰り返す
+		// {
+		// 	sort_to_wedge(a, b);
+		// 	wedge_is_exist = wedge_in_a(a);
+		// }
 	}
+	f_step_sort_towedge(a, b); //out.txt　のようなとき　secondstep（はじめに分けた残り二つ）に処理を渡すためにwedge処理をしなければならないが、wedgeの数は6以上もあるのでそれを解消する
 	quicksort_secondstep(a, b);
+}
+
+//aのwedgeまでを入れる
+//6より大きい　456 123の三パターンで行う
+void f_step_sort_towedge(t_staccontent **a, t_staccontent **b)
+{
+	bool	wedge_is_exist;
+	
+	wedge_is_exist = wedge_in_a(a);
+	while (wedge_is_exist == true)
+	{
+		sort_to_wedge(a, b);
+		wedge_is_exist = wedge_in_a(a);
+	}
 }
 
 void less_threenum(t_staccontent **a, t_staccontent **b)
 {
-	int i = 0;
+	int i;
 
+	i = 0;
 	if (grasp_listlen(b) == 1)
 		b_to_a_sorted(a, b);
 	else if (grasp_listlen(b) == 2)
@@ -50,12 +69,14 @@ void less_threenum(t_staccontent **a, t_staccontent **b)
 		patt_twonum_in_b(b);
 		while (i++ != 2)
 			b_to_a_sorted(a, b);
+		return ;
 	}
 	else if (grasp_listlen(b) == 3)
 	{
 		patt_threenum_in_b(b);
 		while (i++ != 3)
 			b_to_a_sorted(a, b);
+		return ;
 	}
 }
 

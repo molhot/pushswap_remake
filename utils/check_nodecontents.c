@@ -12,11 +12,11 @@ void show_node(t_staccontent **a)
 	{
 		while (node -> next != *a)
 		{
-			printf("%d is %d and wedge is %d (0 is false)\n", i, node->num, node->wedge);
+			printf("%d is %d and wedge is %d (0 is false) && sorted is %d\n", i, node->num, node->wedge, node->sorted);
 			i++;
 			node = node->next;
 		}
-		printf("%d is %d and wedge is %d (0 is false)\n", i, node->num, node->wedge);
+		printf("%d is %d and wedge is %d (0 is false) && sorted is %d\n", i, node->num, node->wedge, node->sorted);
 		*a = first;
 	}
 	else

@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2022/12/30 08:42:58 by satushi          ###   ########.fr       */
+/*   Updated: 2022/12/31 00:12:23 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ int		ft_atoi(const char *str);
 //quicksort
 void	quick_sort_main(t_staccontent **a, t_staccontent **b);
 void	quicksort_firststep(t_staccontent **a, t_staccontent **b);
+void	f_step_sort_towedge(t_staccontent **a, t_staccontent **b);
 void	quicksort_secondstep(t_staccontent **a, t_staccontent **b);
 void	divide_less_six(t_staccontent **a, t_staccontent **b);
 void	less_threenum(t_staccontent **a, t_staccontent **b);
