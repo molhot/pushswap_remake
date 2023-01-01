@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/01 14:46:59 by user             ###   ########.fr       */
+/*   Updated: 2023/01/01 16:50:59 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ bool	argument_checker(int arg_num, char **argument);
 void	patt_threenum_in_b(t_staccontent **list);
 void	patt_twonum_in_b(t_staccontent **list);
 void	three_pt_helper(t_staccontent **a, t_staccontent **b);
+void	three_pt_helper_2(t_staccontent **a, t_staccontent **b);
 void	patt_threenum_in_a(t_staccontent **a, t_staccontent **b);
 
 //list's basic info

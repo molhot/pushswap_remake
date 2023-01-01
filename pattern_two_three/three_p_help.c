@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 14:40:20 by user              #+#    #+#             */
-/*   Updated: 2023/01/01 14:54:31 by user             ###   ########.fr       */
+/*   Updated: 2023/01/01 16:50:41 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,14 @@ void three_pt_helper(t_staccontent **a, t_staccontent **b)
     three_pt_helper_2(a, b);
 }
 
-static void three_pt_helper_2(t_staccontent **a, t_staccontent **b)
+void three_pt_helper_2(t_staccontent **a, t_staccontent **b)
 {
     if ((*a)->next->num < (*a)->next->next->num && (*a)->next->next->num < (*a)->num)
     {
-        push_swap_sa(a, b);
-        push_swap_ra(a, b);
-        push_swap_sa(a, b);
-        push_swap_ra(a, b);
-        push_swap_ra(a, b);
+        push_swap_sa(a);
+        push_swap_ra(a);
+        push_swap_sa(a);
+        push_swap_ra(a);
+        push_swap_ra(a);
     }
 }
