@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   quicksort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 04:03:23 by satushi           #+#    #+#             */
-/*   Updated: 2022/12/31 00:16:57 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/01 15:09:33 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,8 @@ void quick_sort_main(t_staccontent **a, t_staccontent **b)
 			more_threenum(a, b, mediam(b));
 			b_len = grasp_listlen(b);
 		}
-		// wedge_is_exist = wedge_in_a(a);
-		// while (wedge_is_exist == true)//aのなかにwedgeがあれば処理を繰り返す
-		// {
-		// 	sort_to_wedge(a, b);
-		// 	wedge_is_exist = wedge_in_a(a);
-		// }
-	}
+		less_threenum(a, b);
+	}//ここまでfstep　b　の処理を記載している
 	f_step_sort_towedge(a, b); //out.txt　のようなとき　secondstep（はじめに分けた残り二つ）に処理を渡すためにwedge処理をしなければならないが、wedgeの数は6以上もあるのでそれを解消する
 	quicksort_secondstep(a, b);
 }

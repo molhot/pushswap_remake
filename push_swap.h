@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2022/12/31 00:12:23 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/01 14:46:59 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ bool	argument_checker(int arg_num, char **argument);
 //two_or_threepattern
 void	patt_threenum_in_b(t_staccontent **list);
 void	patt_twonum_in_b(t_staccontent **list);
+void	three_pt_helper(t_staccontent **a, t_staccontent **b);
+void	patt_threenum_in_a(t_staccontent **a, t_staccontent **b);
 
 //list's basic info
 size_t	grasp_listlen(t_staccontent **sublist);
