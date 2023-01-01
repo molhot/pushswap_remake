@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pushswap_main.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:27:49 by satushi           #+#    #+#             */
-/*   Updated: 2022/12/30 08:33:42 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/01 20:29:58 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,10 +111,10 @@ int	main(int argc, char **argv)
 	node = (*a);
 	while (node->next != *a)
 	{
-		printf("|%d is %d && wedge is %d && sorted is %d|\n" ,i, node->num, node->wedge, node->sorted);
+		//printf("|%d is %d && wedge is %d && sorted is %d|\n" ,i, node->num, node->wedge, node->sorted);
 		node = node->next;
 		i++;
 	}
-	printf("|%d is %d && wedge is %d && sorted is %d|\n" ,i, node->num, node->wedge, node->sorted);
+	//printf("|%d is %d && wedge is %d && sorted is %d|\n" ,i, node->num, node->wedge, node->sorted);
 	return (1);
 }

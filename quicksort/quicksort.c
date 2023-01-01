@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 04:03:23 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/01 18:38:55 by user             ###   ########.fr       */
+/*   Updated: 2023/01/01 20:09:07 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,6 @@ void f_step_sort_towedge(t_staccontent **a, t_staccontent **b)
 	wedge_is_exist = wedge_in_a(a);
 	while (wedge_is_exist == true)
 	{
-		printf("********\n");
-		show_node(a);
-		printf("a's test\n");
-		printf("----------\n");
-		show_node(b);
-		printf("********\n");
 		sort_to_wedge(a, b);
 		wedge_is_exist = wedge_in_a(a);
 	}
