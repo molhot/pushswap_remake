@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 06:21:23 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/01 17:30:21 by user             ###   ########.fr       */
+/*   Updated: 2023/01/01 18:51:42 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,11 @@ void wedge_position_over_six(t_staccontent **a, t_staccontent **b)//aのwedgeが
 	size_t	b_len;
 	bool	first_operation;
 
-	printf("wedge num counter\n");
 	a_wedge_num = obtain_wedgeposition(a);
-	printf("wedge num is >> %ld\n", a_wedge_num);
 	while (a_wedge_num != 0)
 	{
-		if ((*b)->wedge == true)
-			(*b)->wedge = false;
+		if ((*a)->wedge == true)
+			(*a)->wedge = false;
 		pb(a, b);
 		a_wedge_num--;
 	}
@@ -82,18 +80,21 @@ void wedge_position_over_six(t_staccontent **a, t_staccontent **b)//aのwedgeが
 void wedge_position_under_six(t_staccontent **a, t_staccontent **b)//6以下の時
 {
 	size_t b_len;
+	t_staccontent *node;
+	t_staccontent *f_node;
 
-	printf("b_len is > %ld\n", b_len);
 	while ((*a)->wedge == false)
 		pb(a, b);
 	pb(a, b);
+	node = (*b);
+	f_node = (*b);
 	b_len = grasp_listlen(b);
-	printf("********\n");
-	show_node(a);
-	printf("a's test\n");
-	printf("----------\n");
-	show_node(b);
-	printf("********\n");
+	while (node->next != f_node)
+	{
+		(node)->wedge = false;
+		node = node->next;
+	}
+	(node)->wedge = false;
 	while (b_len > 3)
 	{
 		more_threenum(a, b, mediam(b));
@@ -123,10 +124,7 @@ void sort_to_wedge(t_staccontent **a, t_staccontent **b)
 	else if (obtain_wedgeposition(a) == 3)
 		sort_to_wedge_pt3(a, b, (*a)->num, (*a)->next->num, (*a)->next->next->num);
 	else if (obtain_wedgeposition(a) < 7)
-	{
-		printf("wedge position is > %ld\n", obtain_wedgeposition(a));
 		wedge_position_under_six(a, b);
-	}
 	else
 		wedge_position_over_six(a, b);
 }

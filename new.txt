@@ -1,0 +1,401 @@
+pb
+pb
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+pb
+rb
+pb
+rb
+pb
+rb
+pb
+pb
+pb
+ra
+pb
+pb
+rb
+ra
+ra
+ra
+pb
+pb
+rb
+pb
+rb
+pb
+rb
+ra
+ra
+ra
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+rb
+rb
+pa
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+pa
+pa
+pa
+rb
+pa
+pa
+rb
+pa
+ra
+pa
+ra
+ra
+ra
+pb
+sa
+ra
+ra
+pa
+ra
+********
+0 is 12 and wedge is 0 (0 is false) && sorted is 0
+1 is 13 and wedge is 1 (0 is false) && sorted is 0
+2 is 27 and wedge is 0 (0 is false) && sorted is 0
+3 is 22 and wedge is 0 (0 is false) && sorted is 0
+4 is 18 and wedge is 1 (0 is false) && sorted is 0
+5 is 28 and wedge is 0 (0 is false) && sorted is 0
+6 is 41 and wedge is 0 (0 is false) && sorted is 0
+7 is 46 and wedge is 0 (0 is false) && sorted is 0
+8 is 44 and wedge is 0 (0 is false) && sorted is 0
+9 is 31 and wedge is 0 (0 is false) && sorted is 0
+10 is 37 and wedge is 0 (0 is false) && sorted is 0
+11 is 36 and wedge is 0 (0 is false) && sorted is 0
+12 is 47 and wedge is 0 (0 is false) && sorted is 0
+13 is 42 and wedge is 1 (0 is false) && sorted is 0
+14 is 88 and wedge is 0 (0 is false) && sorted is 0
+15 is 89 and wedge is 0 (0 is false) && sorted is 0
+16 is 73 and wedge is 0 (0 is false) && sorted is 0
+17 is 79 and wedge is 0 (0 is false) && sorted is 0
+18 is 53 and wedge is 0 (0 is false) && sorted is 0
+19 is 72 and wedge is 0 (0 is false) && sorted is 0
+20 is 49 and wedge is 0 (0 is false) && sorted is 0
+21 is 54 and wedge is 0 (0 is false) && sorted is 0
+22 is 56 and wedge is 0 (0 is false) && sorted is 0
+23 is 97 and wedge is 0 (0 is false) && sorted is 0
+24 is 51 and wedge is 0 (0 is false) && sorted is 0
+25 is 57 and wedge is 0 (0 is false) && sorted is 0
+26 is 62 and wedge is 0 (0 is false) && sorted is 0
+27 is 83 and wedge is 0 (0 is false) && sorted is 0
+28 is 4 and wedge is 0 (0 is false) && sorted is 1
+29 is 6 and wedge is 0 (0 is false) && sorted is 1
+a's test
+----------
+this node is NULL********
+********
+0 is 27 and wedge is 0 (0 is false) && sorted is 0
+1 is 22 and wedge is 0 (0 is false) && sorted is 0
+2 is 18 and wedge is 1 (0 is false) && sorted is 0
+3 is 28 and wedge is 0 (0 is false) && sorted is 0
+4 is 41 and wedge is 0 (0 is false) && sorted is 0
+5 is 46 and wedge is 0 (0 is false) && sorted is 0
+6 is 44 and wedge is 0 (0 is false) && sorted is 0
+7 is 31 and wedge is 0 (0 is false) && sorted is 0
+8 is 37 and wedge is 0 (0 is false) && sorted is 0
+9 is 36 and wedge is 0 (0 is false) && sorted is 0
+10 is 47 and wedge is 0 (0 is false) && sorted is 0
+11 is 42 and wedge is 1 (0 is false) && sorted is 0
+12 is 88 and wedge is 0 (0 is false) && sorted is 0
+13 is 89 and wedge is 0 (0 is false) && sorted is 0
+14 is 73 and wedge is 0 (0 is false) && sorted is 0
+15 is 79 and wedge is 0 (0 is false) && sorted is 0
+16 is 53 and wedge is 0 (0 is false) && sorted is 0
+17 is 72 and wedge is 0 (0 is false) && sorted is 0
+18 is 49 and wedge is 0 (0 is false) && sorted is 0
+19 is 54 and wedge is 0 (0 is false) && sorted is 0
+20 is 56 and wedge is 0 (0 is false) && sorted is 0
+21 is 97 and wedge is 0 (0 is false) && sorted is 0
+22 is 51 and wedge is 0 (0 is false) && sorted is 0
+23 is 57 and wedge is 0 (0 is false) && sorted is 0
+24 is 62 and wedge is 0 (0 is false) && sorted is 0
+25 is 83 and wedge is 0 (0 is false) && sorted is 0
+26 is 4 and wedge is 0 (0 is false) && sorted is 1
+27 is 6 and wedge is 0 (0 is false) && sorted is 1
+28 is 12 and wedge is 0 (0 is false) && sorted is 1
+29 is 13 and wedge is 0 (0 is false) && sorted is 1
+a's test
+----------
+this node is NULL********
+********
+0 is 28 and wedge is 0 (0 is false) && sorted is 0
+1 is 41 and wedge is 0 (0 is false) && sorted is 0
+2 is 46 and wedge is 0 (0 is false) && sorted is 0
+3 is 44 and wedge is 0 (0 is false) && sorted is 0
+4 is 31 and wedge is 0 (0 is false) && sorted is 0
+5 is 37 and wedge is 0 (0 is false) && sorted is 0
+6 is 36 and wedge is 0 (0 is false) && sorted is 0
+7 is 47 and wedge is 0 (0 is false) && sorted is 0
+8 is 42 and wedge is 1 (0 is false) && sorted is 0
+9 is 88 and wedge is 0 (0 is false) && sorted is 0
+10 is 89 and wedge is 0 (0 is false) && sorted is 0
+11 is 73 and wedge is 0 (0 is false) && sorted is 0
+12 is 79 and wedge is 0 (0 is false) && sorted is 0
+13 is 53 and wedge is 0 (0 is false) && sorted is 0
+14 is 72 and wedge is 0 (0 is false) && sorted is 0
+15 is 49 and wedge is 0 (0 is false) && sorted is 0
+16 is 54 and wedge is 0 (0 is false) && sorted is 0
+17 is 5pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+rb
+rb
+rb
+pa
+pa
+pa
+rb
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pa
+pa
+rb
+rb
+sb
+pa
+ra
+pa
+ra
+sa
+ra
+ra
+6 and wedge is 0 (0 is false) && sorted is 0
+18 is 97 and wedge is 0 (0 is false) && sorted is 0
+19 is 51 and wedge is 0 (0 is false) && sorted is 0
+20 is 57 and wedge is 0 (0 is false) && sorted is 0
+21 is 62 and wedge is 0 (0 is false) && sorted is 0
+22 is 83 and wedge is 0 (0 is false) && sorted is 0
+23 is 4 and wedge is 0 (0 is false) && sorted is 1
+24 is 6 and wedge is 0 (0 is false) && sorted is 1
+25 is 12 and wedge is 0 (0 is false) && sorted is 1
+26 is 13 and wedge is 0 (0 is false) && sorted is 1
+27 is 18 and wedge is 0 (0 is false) && sorted is 1
+28 is 22 and wedge is 0 (0 is false) && sorted is 1
+29 is 27 and wedge is 0 (0 is false) && sorted is 1
+a's test
+----------
+this node is NULL********
+********
+0 is 28 and wedge is 0 (0 is false) && sorted is 0
+1 is 31 and wedge is 0 (0 is false) && sorted is 0
+2 is 37 and wedge is 0 (0 is false) && sorted is 0
+3 is 36 and wedge is 1 (0 is false) && sorted is 0
+4 is 41 and wedge is 0 (0 is false) && sorted is 0
+5 is 46 and wedge is 0 (0 is false) && sorted is 0
+6 is 44 and wedge is 0 (0 is false) && sorted is 0
+7 is 47 and wedge is 0 (0 is false) && sorted is 0
+8 is 42 and wedge is 1 (0 is false) && sorted is 0
+9 is 88 and wedge is 0 (0 is false) && sorted is 0
+10 is 89 and wedge is 0 (0 is false) && sorted is 0
+11 is 73 and wedge is 0 (0 is false) && sorted is 0
+12 is 79 and wedge is 0 (0 is false) && sorted is 0
+13 is 53 and wedge is 0 (0 is false) && sorted is 0
+14 is 72 and wedge is 0 (0 is false) && sorted is 0
+15 is 49 and wedge is 0 (0 is false) && sorted is 0
+16 is 54 and wedge is 0 (0 is false) && sorted is 0
+17 is 56 and wedge is 0 (0 is false) && sorted is 0
+18 is 97 and wedge is 0 (0 is false) && sorted is 0
+19 is 51 and wedge is 0 (0 is false) && sorted is 0
+20 is 57 and wedge is 0 (0 is false) && sorted is 0
+21 is 62 and wedge is 0 (0 is false) && sorted is 0
+22 is 83 and wedge is 0 (0 is false) && sorted is 0
+23 is 4 and wedge is 0 (0 is false) && sorted is 1
+24 is 6 and wedge is 0 (0 is false) && sorted is 1
+25 is 12 and wedge is 0 (0 is false) && sorted is 1
+26 is 13 and wedge is 0 (0 is false) && sorted is 1
+27 is 18 and wedge is 0 (0 is false) && sorted is 1
+28 is 22 and wedge is 0 (0 is false) && sorted is 1
+29 is 27 and wedge is 0 (0 is false) && sorted is 1
+a's test
+----------
+this node is NULL********
+********
+0 is 37 and wedge is 0 (0 is false) && sorted is 0
+1 is 36 and wedge is 1 (0 is false) && sorted is 0
+2 is 41 and wedge is 0 (0 is false) && sorted is 0
+3 is 46 and wedge is 0 (0 is false) && sorted is 0
+4 is 44 and wedge is 0 (0 is false) && sorted is 0
+5 is 47 and wedge is 0 (0 is false) && sorted is 0
+6 is 42 and wedge is 1 (0 is false) && sorted is 0
+7 is 88 and wedge is 0 (0 is false) && sorted is 0
+8 is 89 and wedge is 0 (0 is false) && sorted is 0
+9 is 73 and wedge is 0 (0 is false) && sorted is 0
+10 is 79 and wedge is 0 (0 is false) && sorted is 0
+11 is 53 and wedge is 0 (0 is false) && sorted is 0
+12 is 72 and wedge is 0 (0 is false) && sorted is 0
+13 is 49 and wedge is 0 (0 is false) && sorted is 0
+14 is 54 and wedge is 0 (0 is false) && sorted is 0
+15 is 56 and wedge is 0 (0 is false) && sorted is 0
+16 is 97 and wedge is 0 (0 is false) && sorted is 0
+17 is 51 and wedge is 0 (0 is false) && sorted is 0
+18 is 57 and wedge is 0 (0 is false) && sorted is 0
+19 is 62 and wedge is 0 (0 is false) && sorted is 0
+20 is 83 and wedge is 0 (0 is false) && sorted is 0
+21 is 4 and wedge is 0 (0 is false) && sorted is 1
+22 is 6 and wedge is 0 (0 is false) && sorted is 1
+23 is 12 and wedge is 0 (0 is false) && sorted is 1
+24 is 13 and wedge is 0 (0 is false) && sorted is 1
+25 is 18 and wedge is 0 (0 is false) && sorted is 1
+26 is 22 and wedge is 0 (0 is false) && sorted is 1
+27 is 27 and wedge is 0 (0 is false) && sorted is 1
+28 is 28 and wedge is 0 (0 is false) && sorted is 1
+29 is 31 and wedge is 0 (0 is false) && sorted is 1
+a's test
+----------
+this node is NULL********
+********
+0 is 41 and wedge is 0 (0 is false) && sorted is 0
+1 is 46 and wedge is 0 (0 is false) && sorted is 0
+2 is 44 and wedge is 0 (0 is false) && sorted is 0
+3 is 47 and wedpb
+pb
+pb
+pb
+pb
+rb
+pa
+pa
+pa
+rb
+sb
+pa
+ra
+pa
+ra
+sa
+ra
+ra
+ra
+ge is 0 (0 is false) && sorted is 0
+4 is 42 and wedge is 1 (0 is false) && sorted is 0
+5 is 88 and wedge is 0 (0 is false) && sorted is 0
+6 is 89 and wedge is 0 (0 is false) && sorted is 0
+7 is 73 and wedge is 0 (0 is false) && sorted is 0
+8 is 79 and wedge is 0 (0 is false) && sorted is 0
+9 is 53 and wedge is 0 (0 is false) && sorted is 0
+10 is 72 and wedge is 0 (0 is false) && sorted is 0
+11 is 49 and wedge is 0 (0 is false) && sorted is 0
+12 is 54 and wedge is 0 (0 is false) && sorted is 0
+13 is 56 and wedge is 0 (0 is false) && sorted is 0
+14 is 97 and wedge is 0 (0 is false) && sorted is 0
+15 is 51 and wedge is 0 (0 is false) && sorted is 0
+16 is 57 and wedge is 0 (0 is false) && sorted is 0
+17 is 62 and wedge is 0 (0 is false) && sorted is 0
+18 is 83 and wedge is 0 (0 is false) && sorted is 0
+19 is 4 and wedge is 0 (0 is false) && sorted is 1
+20 is 6 and wedge is 0 (0 is false) && sorted is 1
+21 is 12 and wedge is 0 (0 is false) && sorted is 1
+22 is 13 and wedge is 0 (0 is false) && sorted is 1
+23 is 18 and wedge is 0 (0 is false) && sorted is 1
+24 is 22 and wedge is 0 (0 is false) && sorted is 1
+25 is 27 and wedge is 0 (0 is false) && sorted is 1
+26 is 28 and wedge is 0 (0 is false) && sorted is 1
+27 is 31 and wedge is 0 (0 is false) && sorted is 1
+28 is 36 and wedge is 0 (0 is false) && sorted is 1
+29 is 37 and wedge is 0 (0 is false) && sorted is 1
+a's test
+----------
+this node is NULL********
+********
+0 is 46 and wedge is 0 (0 is false) && sorted is 0
+1 is 44 and wedge is 0 (0 is false) && sorted is 0
+2 is 47 and wedge is 1 (0 is false) && sorted is 0
+3 is 88 and wedge is 0 (0 is false) && sorted is 0
+4 is 89 and wedge is 0 (0 is false) && sorted is 0
+5 is 73 and wedge is 0 (0 is false) && sorted is 0
+6 is 79 and wedge is 0 (0 is false) && sorted is 0
+7 is 53 and wedge is 0 (0 is false) && sorted is 0
+8 is 72 and wedge is 0 (0 is false) && sorted is 0
+9 is 49 and wedge is 0 (0 is false) && sorted is 0
+10 is 54 and wedge is 0 (0 is false) && sorted is 0
+11 is 56 and wedge is 0 (0 is false) && sorted is 0
+12 is 97 and wedge is 0 (0 is false) && sorted is 0
+13 is 51 and wedge is 0 (0 is false) && sorted is 0
+14 is 57 and wedge is 0 (0 is false) && sorted is 0
+15 is 62 and wedge is 0 (0 is false) && sorted is 0
+16 is 83 and wedge is 0 (0 is false) && sorted is 0
+17 is 4 and wedge is 0 (0 is false) && sorted is 1
+18 is 6 and wedge is 0 (0 is false) && sorted is 1
+19 is 12 and wedge is 0 (0 is false) && sorted is 1
+20 is 13 and wedge is 0 (0 is false) && sorted is 1
+21 is 18 and wedge is 0 (0 is false) && sorted is 1
+22 is 22 and wedge is 0 (0 is false) && sorted is 1
+23 is 27 and wedge is 0 (0 is false) && sorted is 1
+24 is 28 and wedge is 0 (0 is false) && sorted is 1
+25 is 31 and wedge is 0 (0 is false) && sorted is 1
+26 is 36 and wedge is 0 (0 is false) && sorted is 1
+27 is 37 and wedge is 0 (0 is false) && sorted is 1
+28 is 41 and wedge is 0 (0 is false) && sorted is 1
+29 is 42 and wedge is 0 (0 is false) && sorted is 1
+a's test
+----------
+this node is NULL********
+|0 is 88 && wedge is 0 && sorted is 0|
+|1 is 89 && wedge is 0 && sorted is 0|
+|2 is 73 && wedge is 0 && sorted is 0|
+|3 is 79 && wedge is 0 && sorted is 0|
+|4 is 53 && wedge is 0 && sorted is 0|
+|5 is 72 && wedge is 0 && sorted is 0|
+|6 is 49 && wedge is 0 && sorted is 0|
+|7 is 54 && wedge is 0 && sorted is 0|
+|8 is 56 && wedge is 0 && sorted is 0|
+|9 is 97 && wedge is 0 && sorted is 0|
+|10 is 51 && wedge is 0 && sorted is 0|
+|11 is 57 && wedge is 0 && sorted is 0|
+|12 is 62 && wedge is 0 && sorted is 0|
+|13 is 83 && wedge is 0 && sorted is 0|
+|14 is 4 && wedge is 0 && sorted is 1|
+|15 is 6 && wedge is 0 && sorted is 1|
+|16 is 12 && wedge is 0 && sorted is 1|
+|17 is 13 && wedge is 0 && sorted is 1|
+|18 is 18 && wedge is 0 && sorted is 1|
+|19 is 22 && wedge is 0 && sorted is 1|
+|20 is 27 && wedge is 0 && sorted is 1|
+|21 is 28 && wedge is 0 && sorted is 1|
+|22 is 31 && wedge is 0 && sorted is 1|
+|23 is 36 && wedge is 0 && sorted is 1|
+|24 is 37 && wedge is 0 && sorted is 1|
+|25 is 41 && wedge is 0 && sorted is 1|
+|26 is 42 && wedge is 0 && sorted is 1|
+|27 is 44 && wedge is 0 && sorted is 1|
+|28 is 46 && wedge is 0 && sorted is 1|
+|29 is 47 && wedge is 0 && sorted is 1|

@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 04:03:23 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/01 17:19:44 by user             ###   ########.fr       */
+/*   Updated: 2023/01/01 18:38:55 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,6 @@ void quick_sort_main(t_staccontent **a, t_staccontent **b)
 		}
 		less_threenum(a, b);
 	}//ここまでfstep　b　の処理を記載している
-	printf("********\n");
-	show_node(a);
-	printf("a's test\n");
-	printf("----------\n");
-	show_node(b);
-	printf("********\n");
 	f_step_sort_towedge(a, b); //out.txt　のようなとき　secondstep（はじめに分けた残り二つ）に処理を渡すためにwedge処理をしなければならないが、wedgeの数は6以上もあるのでそれを解消する
 	quicksort_secondstep(a, b);
 }
@@ -53,13 +47,13 @@ void f_step_sort_towedge(t_staccontent **a, t_staccontent **b)
 	wedge_is_exist = wedge_in_a(a);
 	while (wedge_is_exist == true)
 	{
-		sort_to_wedge(a, b);
 		printf("********\n");
 		show_node(a);
 		printf("a's test\n");
 		printf("----------\n");
 		show_node(b);
 		printf("********\n");
+		sort_to_wedge(a, b);
 		wedge_is_exist = wedge_in_a(a);
 	}
 }
