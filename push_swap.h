@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/01 16:50:59 by user             ###   ########.fr       */
+/*   Updated: 2023/01/04 20:24:40 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int		mediam(t_staccontent **sublist);
 
 //showing message
 void	showchar(char *sub);
-void	error_show();
+void	error_show(void);
 
 //atoi
 int		ft_atoi(const char *str);
@@ -92,7 +92,8 @@ void	sort_to_wedge(t_staccontent **a, t_staccontent **b);
 //quicksort func for common
 void	b_to_a_sorted(t_staccontent **a, t_staccontent **b);
 void	a_to_a_sorted(t_staccontent **a);
-void	sort_to_wedge_pt3(t_staccontent **a, t_staccontent **b, int f, int s, int l);
+void	sort_to_wedge_pt3(t_staccontent **a, \
+t_staccontent **b, int f, int s, int l);
 
 //show_nodecontent errorhandling
 void	show_node(t_staccontent **a);

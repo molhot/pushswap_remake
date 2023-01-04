@@ -6,13 +6,14 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 07:55:46 by satushi           #+#    #+#             */
-/*   Updated: 2022/12/30 08:22:13 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/04 21:04:42 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void sort_pt3_helper2(t_staccontent **a, t_staccontent **b, int f, int s, int l)
+static	void	sort_pt3_helper2(t_staccontent **a, \
+t_staccontent **b, int f, int s, int l)
 {
 	if (l < s && s < f)
 	{
@@ -25,9 +26,10 @@ static void sort_pt3_helper2(t_staccontent **a, t_staccontent **b, int f, int s,
 	}
 }
 
-static void sort_pt3_helper1(t_staccontent **a, t_staccontent **b, int f, int s, int l)
+static	void	sort_pt3_helper1(t_staccontent **a, \
+t_staccontent **b, int f, int s, int l)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (l < f && f < s)
@@ -51,9 +53,10 @@ static void sort_pt3_helper1(t_staccontent **a, t_staccontent **b, int f, int s,
 		sort_pt3_helper2(a, b, f, s, l);
 }
 
-void sort_to_wedge_pt3(t_staccontent **a, t_staccontent **b, int f, int s, int l)
+void	sort_to_wedge_pt3(t_staccontent **a, \
+t_staccontent **b, int f, int s, int l)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (f < s && s < l)

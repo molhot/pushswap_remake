@@ -6,11 +6,11 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:25:16 by satushi           #+#    #+#             */
-/*   Updated: 2022/12/30 06:18:00 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/04 20:25:30 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../push_swap.h"
+#include "../push_swap.h"
 
 void	patt_twonum_in_b(t_staccontent **list)
 {

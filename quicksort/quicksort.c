@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   quicksort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 04:03:23 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/01 20:09:07 by user             ###   ########.fr       */
+/*   Updated: 2023/01/04 21:05:26 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../push_swap.h"
+#include "../push_swap.h"
 
-void quick_sort_main(t_staccontent **a, t_staccontent **b)
+void	quick_sort_main(t_staccontent **a, t_staccontent **b)
 {
 	int		b_len;
 
@@ -23,9 +23,9 @@ void quick_sort_main(t_staccontent **a, t_staccontent **b)
 		divide_less_six(a, b);
 		b_len = grasp_listlen(b);
 	}
-	if (b_len <= 3)// bの6以下の際の対応方法、かつ3以下
+	if (b_len <= 3)
 		less_threenum(a, b);
-	else// bの6以下、かつ3より大きい
+	else
 	{
 		while (b_len > 3)
 		{
@@ -33,17 +33,15 @@ void quick_sort_main(t_staccontent **a, t_staccontent **b)
 			b_len = grasp_listlen(b);
 		}
 		less_threenum(a, b);
-	}//ここまでfstep　b　の処理を記載している
-	f_step_sort_towedge(a, b); //out.txt　のようなとき　secondstep（はじめに分けた残り二つ）に処理を渡すためにwedge処理をしなければならないが、wedgeの数は6以上もあるのでそれを解消する
+	}
+	f_step_sort_towedge(a, b);
 	quicksort_secondstep(a, b);
 }
 
-//aのwedgeまでを入れる
-//6より大きい　456 123の三パターンで行う
-void f_step_sort_towedge(t_staccontent **a, t_staccontent **b)
+void	f_step_sort_towedge(t_staccontent **a, t_staccontent **b)
 {
 	bool	wedge_is_exist;
-	
+
 	wedge_is_exist = wedge_in_a(a);
 	while (wedge_is_exist == true)
 	{
@@ -52,9 +50,9 @@ void f_step_sort_towedge(t_staccontent **a, t_staccontent **b)
 	}
 }
 
-void less_threenum(t_staccontent **a, t_staccontent **b)
+void	less_threenum(t_staccontent **a, t_staccontent **b)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (grasp_listlen(b) == 1)
@@ -75,7 +73,7 @@ void less_threenum(t_staccontent **a, t_staccontent **b)
 	}
 }
 
-void more_threenum(t_staccontent **a, t_staccontent **b, int b_mediam)
+void	more_threenum(t_staccontent **a, t_staccontent **b, int b_mediam)
 {
 	int		b_len;
 	int		b_len_half;

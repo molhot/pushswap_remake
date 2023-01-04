@@ -6,16 +6,16 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 07:22:11 by satushi           #+#    #+#             */
-/*   Updated: 2022/12/30 08:30:32 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/04 20:57:54 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../push_swap.h"
+#include "../push_swap.h"
 
-bool wedge_in_a(t_staccontent **a)
+bool	wedge_in_a(t_staccontent **a)
 {
-	t_staccontent *f_node;
-	t_staccontent *node;
+	t_staccontent	*f_node;
+	t_staccontent	*node;
 
 	f_node = *a;
 	node = *a;

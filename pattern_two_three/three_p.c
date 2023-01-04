@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   three_p.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:02 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/01 14:47:23 by user             ###   ########.fr       */
+/*   Updated: 2023/01/04 21:24:29 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,23 @@
 
 void	patt_threenum_in_b(t_staccontent **list)
 {
-	if ((*list)->num > (*list)->next->num && (*list)->next->num > (*list)->next->next->num)
+	if ((*list)->num > (*list)->next->num && \
+	(*list)->next->num > (*list)->next->next->num)
 	{
 		push_swap_rb(list);
 		push_swap_sb(list);
 	}
-	if ((*list)->next->next->num > (*list)->next->num && (*list)->num > (*list)->next->next->num)
+	if ((*list)->next->next->num > (*list)->next->num && \
+	(*list)->num > (*list)->next->next->num)
 		push_swap_rb(list);
-	if ((*list)->num > (*list)->next->num && (*list)->next->next->num > (*list)->num)
+	if ((*list)->num > (*list)->next->num && \
+	(*list)->next->next->num > (*list)->num)
 		push_swap_sb(list);
-	if ((*list)->next->num > (*list)->num && (*list)->num > (*list)->next->next->num)
+	if ((*list)->next->num > (*list)->num && \
+	(*list)->num > (*list)->next->next->num)
 		push_swap_rrb(list);
-	if ((*list)->next->num > (*list)->next->next->num && (*list)->next->next->num > (*list)->num)
+	if ((*list)->next->num > (*list)->next->next->num && \
+	(*list)->next->next->num > (*list)->num)
 	{
 		push_swap_rb(list);
 		push_swap_sb(list);
@@ -33,13 +38,13 @@ void	patt_threenum_in_b(t_staccontent **list)
 	}
 }
 
-static void all_reverse(t_staccontent **a, t_staccontent **b)
+static	void	all_reverse(t_staccontent **a, t_staccontent **b)
 {
-	pb(a,b);
+	pb(a, b);
 	push_swap_sa(a);
 	push_swap_ra(a);
 	push_swap_ra(a);
-	pa(a,b);
+	pa(a, b);
 	push_swap_ra(a);
 }
 
@@ -48,7 +53,6 @@ void	patt_threenum_in_a(t_staccontent **a, t_staccontent **b)
 	int	i;
 
 	i = 0;
-	//sortedを与える
 	if ((*a)->num < (*a)->next->num < (*a)->next->next->num)
 		all_reverse(a, b);
 	else if ((*a)->next->next->num < (*a)->num && (*a)->num < (*a)->next->num)

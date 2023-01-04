@@ -6,13 +6,13 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 06:08:42 by satushi           #+#    #+#             */
-/*   Updated: 2022/12/30 08:39:06 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/04 20:49:39 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../push_swap.h"
+#include "../push_swap.h"
 
-void quicksort_firststep(t_staccontent **a, t_staccontent **b)
+void	quicksort_firststep(t_staccontent **a, t_staccontent **b)
 {
 	size_t	listlen;
 	int		a_mediam;
@@ -35,7 +35,8 @@ void quicksort_firststep(t_staccontent **a, t_staccontent **b)
 	}
 }
 
-void divide_less_six_helper(t_staccontent **a, t_staccontent **b, int *judge, int b_mediam)
+void	divide_less_six_helper(t_staccontent **a, t_staccontent **b, \
+int *judge, int b_mediam)
 {
 	if (b_mediam <= (*b)->num && *judge == 1)
 	{
@@ -49,7 +50,7 @@ void divide_less_six_helper(t_staccontent **a, t_staccontent **b, int *judge, in
 		push_swap_rb(b);
 }
 
-void divide_less_six(t_staccontent **a, t_staccontent **b)
+void	divide_less_six(t_staccontent **a, t_staccontent **b)
 {
 	size_t	listlen;
 	int		b_mediam;

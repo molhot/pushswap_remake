@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pushswap_main.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:27:49 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/01 20:29:58 by user             ###   ########.fr       */
+/*   Updated: 2023/01/04 21:29:14 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,5 +116,6 @@ int	main(int argc, char **argv)
 		i++;
 	}
 	//printf("|%d is %d && wedge is %d && sorted is %d|\n" ,i, node->num, node->wedge, node->sorted);
+	system("leaks a.out");
 	return (1);
 }
