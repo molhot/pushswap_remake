@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:27:49 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/06 13:43:14 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/06 17:11:36 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,11 +96,8 @@ void	push_swap(int arg_num, char **num_ch)
 	dupli_check = duplication_checker(a);
 	if (dupli_check == false)
 		return ;
-	if ((*a)->next == (*a))
-		return ;
-	if (sortcheck(a) == true)
+	if ((*a)->next == (*a) || sortcheck(a) == true)
 	{
-		printf("a len is %ld\n", grasp_listlen(a));
 		free_all_a(a);
 		return ;
 	}
@@ -122,7 +119,7 @@ int	main(int argc, char **argv)
 	push_swap(argc, argv);
 	if (a == NULL && argc != 1)
 	{
-		printf("Error\n");
+		//printf("Error\n");
 		return (1);
 	}
 	else if (a == NULL && argc == 1)
