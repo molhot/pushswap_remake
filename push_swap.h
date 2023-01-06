@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/04 20:24:40 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/06 18:02:52 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ void	sort_to_wedge(t_staccontent **a, t_staccontent **b);
 void	b_to_a_sorted(t_staccontent **a, t_staccontent **b);
 void	a_to_a_sorted(t_staccontent **a);
 void	sort_to_wedge_pt3(t_staccontent **a, \
-t_staccontent **b, int f, int s, int l);
+t_staccontent **b, int s, int l);
 
 //show_nodecontent errorhandling
 void	show_node(t_staccontent **a);

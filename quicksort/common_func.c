@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   common_func.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 06:21:23 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/04 20:46:53 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/06 18:06:57 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,8 +119,7 @@ void	sort_to_wedge(t_staccontent **a, t_staccontent **b)
 			a_to_a_sorted(a);
 	}
 	else if (obtain_wedgeposition(a) == 3)
-		sort_to_wedge_pt3(a, b, (*a)->num, \
-		(*a)->next->num, (*a)->next->next->num);
+		sort_to_wedge_pt3(a, b, (*a)->next->num, (*a)->next->next->num);
 	else if (obtain_wedgeposition(a) < 7)
 		wedge_position_under_six(a, b);
 	else
