@@ -7,6 +7,7 @@ Error: LINE_TOO_LONG        (line: 114, col: 105):	line too long
 Error: LINE_TOO_LONG        (line: 118, col:   1):	line too long
 Error: WRONG_SCOPE_COMMENT  (line: 118, col:   5):	Comment is invalid in this scope
 Error: LINE_TOO_LONG        (line: 118, col: 101):	line too long
+Error: TOO_MANY_LINES       (line: 121, col:   1):	Function has more than 25 lines
 push_swap.h: Error!
 Error: TOO_MANY_ARGS        (line:  96, col:  40):	Function has more than 4 arguments
 pattern_two_three/two_p.c: OK!

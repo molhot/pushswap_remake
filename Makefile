@@ -12,7 +12,7 @@ SRCS = arg_checker/checker.c\
 
 OBJS = $(SRCS:.c=.o)
 
-CC = gcc
+CC = gcc -fsanitize=address -fno-omit-frame-pointer
 
 all : $(NAME)
 

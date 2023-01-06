@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:27:49 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/04 21:29:14 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/06 13:43:14 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,26 @@ t_staccontent	**insertelem_tostack(int counter, char **numstr)
 	return (a);
 }
 
-t_staccontent	**push_swap(int arg_num, char **num_ch)
+void	free_all_a(t_staccontent **a)
+{
+	size_t			node_len;
+	t_staccontent	*n_node;
+	t_staccontent	*node;
+
+	node_len = grasp_listlen(a);
+	node = (*a);
+	while (node_len != 1)
+	{
+		n_node = node->next;
+		free(node);
+		node = n_node;
+		node_len--;
+	}
+	free(node);
+	free(a);
+}
+
+void	push_swap(int arg_num, char **num_ch)
 {
 	t_staccontent	**a;
 	t_staccontent	**b;
@@ -69,25 +88,28 @@ t_staccontent	**push_swap(int arg_num, char **num_ch)
 	bool			dupli_check;
 
 	if (arg_num == 1)
-		return (NULL);
+		return ;
 	argment_letimacy = argument_checker(arg_num, num_ch);
 	if (argment_letimacy == false)
-		return (NULL);
+		return ;
 	a = insertelem_tostack(arg_num, num_ch);
 	dupli_check = duplication_checker(a);
 	if (dupli_check == false)
-		return (false);
+		return ;
 	if ((*a)->next == (*a))
-		return (a);
+		return ;
 	if (sortcheck(a) == true)
-		return (a);
+	{
+		printf("a len is %ld\n", grasp_listlen(a));
+		free_all_a(a);
+		return ;
+	}
 	b = list_initialization();
 	free(*b);
 	(*b) = NULL;
 	quick_sort_main(a, b);
 	free(b);
-	//free_all_a(); //free a's node all
-	return (a);
+	free_all_a(a);
 }
 
 int	main(int argc, char **argv)
@@ -97,7 +119,7 @@ int	main(int argc, char **argv)
 	int				i;
 
 	i = 0;
-	a = push_swap(argc, argv);
+	push_swap(argc, argv);
 	if (a == NULL && argc != 1)
 	{
 		printf("Error\n");
@@ -116,6 +138,5 @@ int	main(int argc, char **argv)
 		i++;
 	}
 	//printf("|%d is %d && wedge is %d && sorted is %d|\n" ,i, node->num, node->wedge, node->sorted);
-	system("leaks a.out");
 	return (1);
 }
