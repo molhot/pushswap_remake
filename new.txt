@@ -1,15 +1,7 @@
-pushswap_main.c: Error!
-Error: TOO_MANY_LINES       (line: 113, col:   1):	Function has more than 25 lines
-Error: TOO_MANY_FUNCS       (line: 115, col:   1):	Too many functions in file
-Error: WRONG_SCOPE_COMMENT  (line: 130, col:   9):	Comment is invalid in this scope
-Error: LINE_TOO_LONG        (line: 136, col:   1):	line too long
-Error: WRONG_SCOPE_COMMENT  (line: 136, col:   9):	Comment is invalid in this scope
-Error: LINE_TOO_LONG        (line: 136, col: 105):	line too long
-Error: LINE_TOO_LONG        (line: 140, col:   1):	line too long
-Error: WRONG_SCOPE_COMMENT  (line: 140, col:   5):	Comment is invalid in this scope
-Error: LINE_TOO_LONG        (line: 140, col: 101):	line too long
-push_swap.h: Error!
-Error: TOO_MANY_ARGS        (line:  96, col:  40):	Function has more than 4 arguments
+sort_num_arrange.c: OK!
+pushswap_main.c: OK!
+push_swap.h: OK!
+free_a.c: OK!
 pattern_two_three/two_p.c: OK!
 pattern_two_three/three_p.c: OK!
 pattern_two_three/three_p_help.c: OK!
@@ -21,15 +13,8 @@ utils/ft_atoi.c: OK!
 utils/show_char.c: OK!
 utils/check_nodecontents.c: OK!
 utils/grasp_listlen.c: OK!
-quicksort/common_func.c: Error!
-Error: WRONG_SCOPE_COMMENT  (line:  30, col:  70):	Comment is invalid in this scope
-Error: LINE_TOO_LONG        (line:  30, col: 129):	line too long
-Error: TOO_MANY_LINES       (line:  75, col:   1):	Function has more than 25 lines
-Error: WRONG_SCOPE_COMMENT  (line:  77, col:  71):	Comment is invalid in this scope
-quicksort/sort_to_wedge_helper.c: Error!
-Error: TOO_MANY_ARGS        (line:  16, col:  40):	Function has more than 4 arguments
-Error: TOO_MANY_ARGS        (line:  30, col:  40):	Function has more than 4 arguments
-Error: TOO_MANY_ARGS        (line:  57, col:  40):	Function has more than 4 arguments
+quicksort/common_func.c: OK!
+quicksort/sort_to_wedge_helper.c: OK!
 quicksort/first_step.c: OK!
 quicksort/quicksort.c: OK!
 quicksort/second_step.c: OK!

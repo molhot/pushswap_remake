@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/06 18:02:52 by user             ###   ########.fr       */
+/*   Updated: 2023/01/06 18:58:39 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,5 +101,8 @@ void	show_node(t_staccontent **a);
 //wedge_checker
 bool	wedge_in_a(t_staccontent **a);
 size_t	obtain_wedgeposition(t_staccontent **list);
+
+//free
+void	free_all_a(t_staccontent **a);
 
 #endif

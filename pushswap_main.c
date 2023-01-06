@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:27:49 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/06 17:11:36 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:06:47 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,45 +61,24 @@ t_staccontent	**insertelem_tostack(int counter, char **numstr)
 	return (a);
 }
 
-void	free_all_a(t_staccontent **a)
-{
-	size_t			node_len;
-	t_staccontent	*n_node;
-	t_staccontent	*node;
-
-	node_len = grasp_listlen(a);
-	node = (*a);
-	while (node_len != 1)
-	{
-		n_node = node->next;
-		free(node);
-		node = n_node;
-		node_len--;
-	}
-	free(node);
-	free(a);
-}
-
-void	push_swap(int arg_num, char **num_ch)
+bool	push_swap(int arg_num, char **num_ch)
 {
 	t_staccontent	**a;
 	t_staccontent	**b;
-	bool			argment_letimacy;
 	bool			dupli_check;
 
 	if (arg_num == 1)
-		return ;
-	argment_letimacy = argument_checker(arg_num, num_ch);
-	if (argment_letimacy == false)
-		return ;
+		return (false);
+	if (argument_checker(arg_num, num_ch) == false)
+		return (false);
 	a = insertelem_tostack(arg_num, num_ch);
 	dupli_check = duplication_checker(a);
 	if (dupli_check == false)
-		return ;
+		return (false);
 	if ((*a)->next == (*a) || sortcheck(a) == true)
 	{
 		free_all_a(a);
-		return ;
+		return (true);
 	}
 	b = list_initialization();
 	free(*b);
@@ -107,33 +86,15 @@ void	push_swap(int arg_num, char **num_ch)
 	quick_sort_main(a, b);
 	free(b);
 	free_all_a(a);
+	return (true);
 }
 
 int	main(int argc, char **argv)
 {
 	t_staccontent	*node;
-	t_staccontent	**a;
-	int				i;
+	bool			check;
 
-	i = 0;
-	push_swap(argc, argv);
-	if (a == NULL && argc != 1)
-	{
-		//printf("Error\n");
-		return (1);
-	}
-	else if (a == NULL && argc == 1)
-	{
-		//printf("\n");
-		return (1);
-	}
-	node = (*a);
-	while (node->next != *a)
-	{
-		//printf("|%d is %d && wedge is %d && sorted is %d|\n" ,i, node->num, node->wedge, node->sorted);
-		node = node->next;
-		i++;
-	}
-	//printf("|%d is %d && wedge is %d && sorted is %d|\n" ,i, node->num, node->wedge, node->sorted);
+	if (false == push_swap(argc, argv))
+		printf("Error\n");
 	return (1);
 }
