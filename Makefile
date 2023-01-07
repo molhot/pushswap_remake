@@ -8,7 +8,7 @@ SRCS = arg_checker/checker.c\
 		sort_checker/sort_checker.c\
 		wedge_checker/check_wedge_in_a.c wedge_checker/next_wedge_position.c\
 		utils/grasp_listlen.c utils/show_char.c utils/ft_atoi.c utils/check_nodecontents.c\
-		pushswap_main.c sort_num_arrange.c free_a.c less_five.c
+		pushswap_main.c sort_num_arrange.c free_a.c less_five.c less_five_sorthelper.c
 
 OBJS = $(SRCS:.c=.o)
 

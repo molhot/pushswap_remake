@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   less_five.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 03:44:50 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/07 11:17:28 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/07 13:58:22 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,12 +97,20 @@ bool	pt_less_five(t_staccontent **a, t_staccontent **b)
 	mediam_num = arrange_sort(a_copyarrange, a_len);
 	move_a_to_b(a, b, mediam_num);
 	if (grasp_listlen(a) == 2 && (*a)->num > (*a)->next->num)
-		push_swap_sa(a);
+	{
+		if ((*b)->num > (*b)->next->num)
+			push_swap_ss(a, b);
+		else
+			push_swap_sa(a);
+	}
 	else
-		patt_threenum_in_a(a, b);
+		less_three_sort(a, b);
+	if ((*b)->num > (*b)->next->num)
+			push_swap_sb(b);
 	patt_twonum_in_b(b);
 	b_to_a_sorted(a, b);
 	b_to_a_sorted(a, b);
+	show_node(a);
 	free(a_copyarrange);
 	free(b);
 	return (free_all_a(a));
