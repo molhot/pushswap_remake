@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:27:49 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/06 19:06:47 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/07 06:53:54 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,28 +65,23 @@ bool	push_swap(int arg_num, char **num_ch)
 {
 	t_staccontent	**a;
 	t_staccontent	**b;
-	bool			dupli_check;
 
-	if (arg_num == 1)
-		return (false);
-	if (argument_checker(arg_num, num_ch) == false)
+	if (arg_num == 1 || argument_checker(arg_num, num_ch) == false)
 		return (false);
 	a = insertelem_tostack(arg_num, num_ch);
-	dupli_check = duplication_checker(a);
-	if (dupli_check == false)
+	if (duplication_checker(a) == false)
 		return (false);
 	if ((*a)->next == (*a) || sortcheck(a) == true)
-	{
-		free_all_a(a);
-		return (true);
-	}
+		return (free_all_a(a));
 	b = list_initialization();
 	free(*b);
 	(*b) = NULL;
-	quick_sort_main(a, b);
+	if (grasp_listlen(a) == 4 || grasp_listlen(a) == 5)
+		return (pt_less_five(a, b));
+	else
+		quick_sort_main(a, b);
 	free(b);
-	free_all_a(a);
-	return (true);
+	return (free_all_a(a));
 }
 
 int	main(int argc, char **argv)
