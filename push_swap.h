@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/07 13:56:14 by user             ###   ########.fr       */
+/*   Updated: 2023/01/08 12:44:36 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ void	less_threenum(t_staccontent **a, t_staccontent **b);
 void	more_threenum(t_staccontent **a, t_staccontent **b, int b_mediam);
 void	sort_to_wedge(t_staccontent **a, t_staccontent **b);
 void    less_three_sort(t_staccontent **a, t_staccontent **b);
+void    anum_twopt(t_staccontent **a, t_staccontent **b);
 
 //minimumsort
 bool	pt_less_five(t_staccontent **a, t_staccontent **b);

@@ -6,11 +6,19 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 13:41:20 by user              #+#    #+#             */
-/*   Updated: 2023/01/07 13:57:16 by user             ###   ########.fr       */
+/*   Updated: 2023/01/08 12:44:04 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void    anum_twopt(t_staccontent **a, t_staccontent **b)
+{
+    if ((*b)->num > (*b)->next->num)
+        push_swap_ss(a, b);
+    else
+        push_swap_sa(a);
+}
 
 void    less_three_sort(t_staccontent **a, t_staccontent **b)
 {

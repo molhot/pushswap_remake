@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 03:44:50 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/07 13:58:22 by user             ###   ########.fr       */
+/*   Updated: 2023/01/08 12:45:50 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,12 +97,7 @@ bool	pt_less_five(t_staccontent **a, t_staccontent **b)
 	mediam_num = arrange_sort(a_copyarrange, a_len);
 	move_a_to_b(a, b, mediam_num);
 	if (grasp_listlen(a) == 2 && (*a)->num > (*a)->next->num)
-	{
-		if ((*b)->num > (*b)->next->num)
-			push_swap_ss(a, b);
-		else
-			push_swap_sa(a);
-	}
+		anum_twopt(a, b);
 	else
 		less_three_sort(a, b);
 	if ((*b)->num > (*b)->next->num)
