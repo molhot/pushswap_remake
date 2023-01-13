@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 03:44:50 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/13 10:22:45 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/13 18:13:40 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,6 @@ bool	pt_less_five(t_staccontent **a, t_staccontent **b)
 	patt_twonum_in_b(b);
 	b_to_a_sorted(a, b);
 	b_to_a_sorted(a, b);
-	//show_node(a);
 	free(a_copyarrange);
 	free(b);
 	return (free_all_a(a));

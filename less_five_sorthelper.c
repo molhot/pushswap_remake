@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 13:41:20 by user              #+#    #+#             */
-/*   Updated: 2023/01/13 10:21:05 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/13 18:16:06 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ void	anum_twopt(t_staccontent **a, t_staccontent **b)
 		push_swap_sa(a);
 }
 
-void	less_three_sort_helper(t_staccontent **a, t_staccontent **b, int next, int last)
+void	less_three_sort_helper(t_staccontent **a, \
+t_staccontent **b, int next, int last)
 {
 	if ((*a)->num < last && last < next)
 	{
@@ -48,22 +49,9 @@ void	less_three_sort(t_staccontent **a, t_staccontent **b)
 	last = (*a)->next->next->num;
 	if ((*a)->num < next && next < last)
 		return ;
-	else if (((*a)->num < last && last < next) || (next < (*a)->num && (*a)->num < last))
+	else if (((*a)->num < last && last < next) || \
+	(next < (*a)->num && (*a)->num < last))
 		less_three_sort_helper(a, b, next, last);
-	// {
-	// 	push_swap_rra(a);
-	// 	if ((*b)->num > (*b)->next->num)
-	// 		push_swap_ss(a, b);
-	// 	else
-	// 		push_swap_sa(a);
-	// }
-	// else if (next < (*a)->num && (*a)->num < last)
-	// {
-	// 	if ((*b)->num > (*b)->next->num)
-	// 		push_swap_ss(a, b);
-	// 	else
-	// 		push_swap_sa(a);
-	// }
 	else if (last < (*a)->num && (*a)->num < next)
 		push_swap_rra(a);
 	else if (next < last && last < (*a)->num)

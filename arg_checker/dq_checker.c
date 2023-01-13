@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:29:17 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/13 15:45:25 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/13 18:17:05 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,17 +84,17 @@ bool	checker_argnum(char *arg)
 	return (digit_check);
 }
 
-bool split_or_return(int argc, char **argnum)
+bool	split_or_return(int argc, char **argnum)
 {
-    bool    checker;
+	bool	checker;
 
-    if (argc == 2)
-    {
-        if (checker_argnum(argnum[1]) == false)
+	if (argc == 2)
+	{
+		if (checker_argnum(argnum[1]) == false)
 			return (false);
 		else
 			return (true);
-    }
-    else
-        return (false);
+	}
+	else
+		return (false);
 }
