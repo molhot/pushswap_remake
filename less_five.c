@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   less_five.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 03:44:50 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/08 12:45:50 by user             ###   ########.fr       */
+/*   Updated: 2023/01/13 10:22:45 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ size_t	count_under_num(int *arrange, size_t range)
 			counter++;
 		range--;
 	}
-	return counter;
+	return (counter);
 }
 
 int	arrange_sort(int *arrange, size_t	range)
@@ -68,7 +68,7 @@ int	arrange_sort(int *arrange, size_t	range)
 	return (tmp);
 }
 
-void	move_a_to_b(t_staccontent **a, t_staccontent **b, int	tmp)
+void	move_a_to_b(t_staccontent **a, t_staccontent **b, int tmp)
 {
 	size_t	a_len;
 
@@ -101,11 +101,11 @@ bool	pt_less_five(t_staccontent **a, t_staccontent **b)
 	else
 		less_three_sort(a, b);
 	if ((*b)->num > (*b)->next->num)
-			push_swap_sb(b);
+		push_swap_sb(b);
 	patt_twonum_in_b(b);
 	b_to_a_sorted(a, b);
 	b_to_a_sorted(a, b);
-	show_node(a);
+	//show_node(a);
 	free(a_copyarrange);
 	free(b);
 	return (free_all_a(a));
