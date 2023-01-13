@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/13 10:11:50 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/13 15:35:10 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,11 @@ typedef struct stac
 	struct stac	*next;
 }t_staccontent;
 
+//utils
+char	**ft_split(char const *s, char c);
+char	*ft_strchr(const char *s, int c);
+size_t	ft_strlen(const char *string_row);
+
 //reverserotation
 void	reversrotation(t_staccontent **subject);
 void	push_swap_rra(t_staccontent **a);
@@ -60,6 +65,7 @@ void	pb(t_staccontent **a, t_staccontent **b);
 bool	sortcheck(t_staccontent **sublist);
 bool	duplication_checker(t_staccontent **a);
 bool	argument_checker(int arg_num, char **argument);
+bool	split_or_return(int argc, char **argnum);
 
 //two_or_threepattern
 void	patt_threenum_in_b(t_staccontent **list);

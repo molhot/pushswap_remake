@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:28:43 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/04 21:05:58 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/13 14:47:34 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ bool	argument_checker(int arg_num, char **argument)
 
 	char_num = 0;
 	arg_counter = 1;
+	if (arg_num == 2)
+		return (split_or_return(arg_num, argument));
 	while (arg_counter != arg_num)
 	{
 		while (argument[arg_counter][char_num] != '\0')
