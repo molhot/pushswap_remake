@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:27:49 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/14 13:21:54 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/14 17:26:30 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,10 @@ bool	push_swap(int arg_num, char **num_ch)
 		return (pt_argnum_2(num_ch[1]));
 	a = insertelem_tostack(arg_num, num_ch, false);
 	if (duplication_checker(a) == false)
+	{
+		free_all_a(a);
 		return (false);
+	}
 	if ((*a)->next == (*a) || sortcheck(a) == true)
 		return (free_all_a(a));
 	b = list_initialization();

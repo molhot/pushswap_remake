@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:38:37 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/07 11:02:34 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/14 17:45:43 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	mediam(t_staccontent **sublist)
 {
 	t_staccontent	**sublist_alt;
 	t_staccontent	*node;
-	int				sum;
+	long long		sum;
 	size_t			listlen;
 
 	sublist_alt = sublist;
