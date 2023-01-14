@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:27:49 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/13 18:12:21 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/14 13:21:54 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,6 @@ int	main(int argc, char **argv)
 	bool			check;
 
 	if (false == push_swap(argc, argv))
-		printf("Error\n");
+		error_show();
 	return (1);
 }

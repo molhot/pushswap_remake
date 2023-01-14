@@ -20,10 +20,10 @@ $(NAME):$(OBJS)
 	$(CC) $(SRCS) -o $(NAME)
 
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME) $(BONUS_OBJS)
+	rm -f $(NAME)
 
 re: fclean all
 

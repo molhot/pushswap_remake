@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:40:43 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/04 21:03:20 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/14 13:20:36 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ void	error_show(void)
 	char	*error_message;
 
 	error_message = "Error\n";
-	write(1, error_message, 7);
+	write(2, error_message, 7);
 }
