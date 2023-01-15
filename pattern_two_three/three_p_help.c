@@ -6,13 +6,13 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 14:40:20 by user              #+#    #+#             */
-/*   Updated: 2023/01/04 20:30:47 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/15 22:47:06 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	three_pt_helper(t_staccontent **a, t_staccontent **b)
+void	three_pt_helper(t_staccontent **a)
 {
 	int	i;
 
@@ -33,10 +33,10 @@ void	three_pt_helper(t_staccontent **a, t_staccontent **b)
 			i++;
 		}
 	}
-	three_pt_helper_2(a, b);
+	three_pt_helper_2(a);
 }
 
-void	three_pt_helper_2(t_staccontent **a, t_staccontent **b)
+void	three_pt_helper_2(t_staccontent **a)
 {
 	if ((*a)->next->num < (*a)->next->next->num && \
 	(*a)->next->next->num < (*a)->num)

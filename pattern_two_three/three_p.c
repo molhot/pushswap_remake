@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:02 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/04 21:24:29 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/15 22:47:36 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	patt_threenum_in_a(t_staccontent **a, t_staccontent **b)
 	int	i;
 
 	i = 0;
-	if ((*a)->num < (*a)->next->num < (*a)->next->next->num)
+	if ((*a)->num < (*a)->next->num && (*a)->next->num < (*a)->next->next->num)
 		all_reverse(a, b);
 	else if ((*a)->next->next->num < (*a)->num && (*a)->num < (*a)->next->num)
 	{
@@ -69,5 +69,5 @@ void	patt_threenum_in_a(t_staccontent **a, t_staccontent **b)
 		}
 	}
 	else
-		three_pt_helper(a, b);
+		three_pt_helper(a);
 }

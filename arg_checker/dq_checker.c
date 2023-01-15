@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dq_checker.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:29:17 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/15 17:02:36 by user             ###   ########.fr       */
+/*   Updated: 2023/01/15 22:43:46 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ bool	space_checker(char *arg)
 		return (true);
 }
 
-static	bool	same_argcomp_check(int sub, int position)
+bool	same_argcomp_check2(int sub, int position)
 {
 	if (position == 0 && (sub != '-' && !('0' <= sub && sub <= '9')))
 		return (false);
@@ -32,25 +32,25 @@ static	bool	same_argcomp_check(int sub, int position)
 	return (true);
 }
 
-bool	digit_or_not(char *arg)
-{
-	size_t	position;
-	char	sub;
+// bool	digit_or_not(char *arg)
+// {
+// 	size_t	position;
+// 	char	sub;
 
-	position = 0;
-	while (arg[position] != '\0')
-	{
-		sub = arg[position];
-		if (same_argcomp_check(sub, position) == false)
-			return (false);
-		position++;
-	}
-	if (position > 11)
-		return (false);
-	if (position >= 10 && arg_intmaxcheck(arg, position) == false)
-		return (false);
-	return (true);
-}
+// 	position = 0;
+// 	while (arg[position] != '\0')
+// 	{
+// 		sub = arg[position];
+// 		if (same_argcomp_check(sub, position) == false)
+// 			return (false);
+// 		position++;
+// 	}
+// 	if (position > 11)
+// 		return (false);
+// 	if (position >= 10 && arg_intmaxcheck(arg, position) == false)
+// 		return (false);
+// 	return (true);
+// }
 
 bool	same_argchecker(char **arg)
 {
@@ -68,12 +68,10 @@ bool	same_argchecker(char **arg)
 
 bool	checker_argnum(char *arg)
 {
-	size_t	position;
 	size_t	arg_position;
 	bool	digit_check;
 	char	**splited_arg;
 
-	position = 0;
 	arg_position = 0;
 	digit_check = true;
 	if (space_checker(arg) == false)
@@ -97,8 +95,6 @@ bool	checker_argnum(char *arg)
 
 bool	split_or_return(int argc, char **argnum)
 {
-	bool	checker;
-
 	if (argc == 2)
 	{
 		if (checker_argnum(argnum[1]) == false)

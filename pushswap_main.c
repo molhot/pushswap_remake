@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pushswap_main.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:27:49 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/15 16:35:58 by user             ###   ########.fr       */
+/*   Updated: 2023/01/15 22:51:55 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,9 +93,6 @@ bool	push_swap(int arg_num, char **num_ch)
 
 int	main(int argc, char **argv)
 {
-	t_staccontent	*node;
-	bool			check;
-
 	if (false == push_swap(argc, argv))
 		error_show();
 	return (1);

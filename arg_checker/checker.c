@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:28:43 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/15 17:01:57 by user             ###   ########.fr       */
+/*   Updated: 2023/01/15 22:42:59 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ bool	arg_intmaxcheck(char *sub_arg, int num)
 	return (true);
 }
 
-static	bool	same_argcomp_check(int subject, int char_num)
+bool	same_argcomp_check(int subject, int char_num)
 {
 	if (char_num == 0 && ('0' > subject || \
 	'9' < subject) && subject != '-')
@@ -46,7 +46,7 @@ bool	argument_checker(int arg_num, char **argument)
 {
 	int		char_num;
 	int		arg_counter;
-	char	subject;
+	char	*subject;
 
 	char_num = 0;
 	arg_counter = 1;
@@ -54,15 +54,16 @@ bool	argument_checker(int arg_num, char **argument)
 		return (split_or_return(arg_num, argument));
 	while (arg_counter != arg_num)
 	{
-		while (argument[arg_counter][char_num] != '\0')
+		subject = argument[arg_counter];
+		while (subject[char_num] != '\0')
 		{
-			if (same_argcomp_check(argument[arg_counter][char_num], char_num) == false)
+			if (same_argcomp_check(subject[char_num], char_num) == false)
 				return (false);
 			char_num++;
 		}
 		if (char_num > 11)
 			return (false);
-		if (char_num >= 10 && arg_intmaxcheck(argument[arg_counter], char_num) == false)
+		if (char_num >= 10 && arg_intmaxcheck(subject, char_num) == false)
 			return (false);
 		arg_counter++;
 		char_num = 0;

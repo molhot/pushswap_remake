@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 04:03:23 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/07 03:33:02 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/15 22:51:42 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,6 @@ void	less_threenum(t_staccontent **a, t_staccontent **b)
 void	more_threenum(t_staccontent **a, t_staccontent **b, int b_mediam)
 {
 	int		b_len;
-	int		b_len_half;
 	bool	f_moved;
 
 	f_moved = true;

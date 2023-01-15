@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/15 14:27:06 by user             ###   ########.fr       */
+/*   Updated: 2023/01/15 22:47:20 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,15 @@ bool			sortcheck(t_staccontent **sublist);
 bool			duplication_checker(t_staccontent **a);
 bool			argument_checker(int arg_num, char **argument);
 bool			split_or_return(int argc, char **argnum);
+bool			digit_or_not(char *arg);
+bool			same_argcomp_check2(int sub, int position);
+bool			same_argcomp_check(int subject, int char_num);
 
 //two_or_threepattern
 void			patt_threenum_in_b(t_staccontent **list);
 void			patt_twonum_in_b(t_staccontent **list);
-void			three_pt_helper(t_staccontent **a, t_staccontent **b);
-void			three_pt_helper_2(t_staccontent **a, t_staccontent **b);
+void			three_pt_helper(t_staccontent **a);
+void			three_pt_helper_2(t_staccontent **a);
 void			patt_threenum_in_a(t_staccontent **a, t_staccontent **b);
 
 //list's basic info

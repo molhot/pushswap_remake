@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   dq_check.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/15 13:59:57 by user              #+#    #+#             */
-/*   Updated: 2023/01/15 22:33:45 by satushi          ###   ########.fr       */
+/*   Created: 2023/01/15 22:34:12 by satushi           #+#    #+#             */
+/*   Updated: 2023/01/15 22:34:42 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void	ft_rewrite(const char *src, char *src_2)
+bool	digit_or_not(char *arg)
 {
-	while ((*src) != '\0')
+	size_t	position;
+	char	sub;
+
+	position = 0;
+	while (arg[position] != '\0')
 	{
-		*src_2 = *src;
-		src_2 = src_2 + 1;
-		src = src + 1;
+		sub = arg[position];
+		if (same_argcomp_check(sub, position) == false)
+			return (false);
+		position++;
 	}
-	*src_2 = '\0';
-}
-
-char	*ft_strdup(const char *s)
-{
-	size_t		len;
-	char		*src_sub;
-
-	len = ft_strlen(s);
-	src_sub = (char *)malloc(sizeof(char) * (len + 1));
-	if (src_sub == NULL)
-		return (NULL);
-	ft_rewrite(s, src_sub);
-	return (src_sub);
+	if (position > 11)
+		return (false);
+	if (position >= 10 && arg_intmaxcheck(arg, position) == false)
+		return (false);
+	return (true);
 }

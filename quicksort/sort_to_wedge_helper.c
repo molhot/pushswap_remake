@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_to_wedge_helper.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 07:55:46 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/06 18:06:22 by user             ###   ########.fr       */
+/*   Updated: 2023/01/15 22:48:19 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,6 @@ t_staccontent **b, int s, int l)
 static	void	sort_pt3_helper1(t_staccontent **a, \
 t_staccontent **b, int s, int l)
 {
-	int	i;
-
-	i = 0;
 	if (l < (*a)->num && (*a)->num < s)
 	{
 		pb(a, b);

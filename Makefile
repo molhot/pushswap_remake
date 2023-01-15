@@ -1,6 +1,6 @@
 NAME = push_swap
 
-SRCS = arg_checker/checker.c arg_checker/dq_checker.c\
+SRCS = arg_checker/checker.c arg_checker/dq_checker.c arg_checker/dq_checker_helper.c\
 		operation/push.c operation/rotation_reverse.c operation/rotation.c operation/swap.c\
 		pattern_two_three/three_p.c pattern_two_three/three_p_help.c pattern_two_three/two_p.c\
 		quicksort/quicksort.c quicksort/common_func.c quicksort/first_step.c quicksort/sort_to_wedge_helper.c\
@@ -12,7 +12,7 @@ SRCS = arg_checker/checker.c arg_checker/dq_checker.c\
 
 OBJS = $(SRCS:.c=.o)
 
-CC = gcc -fsanitize=address -fno-omit-frame-pointer
+CC = gcc -fsanitize=address -fno-omit-frame-pointer -Wall -Wextra -Werror
 
 all : $(NAME)
 

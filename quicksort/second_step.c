@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 08:38:45 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/04 20:53:10 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/15 22:48:33 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ static	void	not_sorted_num(t_staccontent **a, t_staccontent **b)
 
 void	quicksort_secondstep(t_staccontent **a, t_staccontent **b)
 {
-	size_t	counter;
 	size_t	b_len;
 
 	not_sorted_num(a, b);
