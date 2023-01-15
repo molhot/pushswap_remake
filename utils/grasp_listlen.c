@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   grasp_listlen.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:38:37 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/15 11:31:37 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/15 11:39:09 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ size_t	grasp_listlen(t_staccontent **sublist)
 	while (node != *sublist_alt)
 	{
 		len++;
-		if (len > (INT_MAX * 2))
+		if (len > INT_MAX)
 			return (len);
 		node = node->next;
 	}

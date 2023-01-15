@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pushswap_main.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:27:49 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/15 11:32:10 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/15 11:39:46 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ bool	push_swap(int arg_num, char **num_ch)
 	if (arg_num == 2 && ft_strchr(num_ch[1], ' ') != NULL)
 		return (pt_argnum_2(num_ch[1]));
 	a = insertelem_tostack(arg_num, num_ch, false);
-	if (duplication_checker(a) == false && grasp_listlen(a) > (INT_MAX)*2)
+	if (duplication_checker(a) == false || grasp_listlen(a) > INT_MAX)
 		return (free_all_a_false(a));
 	if ((*a)->next == (*a) || sortcheck(a) == true)
 		return (free_all_a(a));
