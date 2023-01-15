@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:29:17 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/15 16:48:35 by user             ###   ########.fr       */
+/*   Updated: 2023/01/15 17:02:36 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,18 @@ bool	space_checker(char *arg)
 		return (true);
 }
 
+static	bool	same_argcomp_check(int sub, int position)
+{
+	if (position == 0 && (sub != '-' && !('0' <= sub && sub <= '9')))
+		return (false);
+	else if (position != 0)
+	{
+		if (!('0' <= sub && sub <= '9'))
+			return (false);
+	}
+	return (true);
+}
+
 bool	digit_or_not(char *arg)
 {
 	size_t	position;
@@ -29,16 +41,10 @@ bool	digit_or_not(char *arg)
 	while (arg[position] != '\0')
 	{
 		sub = arg[position];
-		if (position == 0 && (sub != '-' && !('0' <= sub && sub <= '9')))
+		if (same_argcomp_check(sub, position) == false)
 			return (false);
-		else if (position != 0)
-		{
-			if (!('0' <= sub && sub <= '9'))
-				return (false);
-		}
 		position++;
 	}
-	printf("%ld\n", position);
 	if (position > 11)
 		return (false);
 	if (position >= 10 && arg_intmaxcheck(arg, position) == false)

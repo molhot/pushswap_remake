@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:28:43 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/15 16:48:27 by user             ###   ########.fr       */
+/*   Updated: 2023/01/15 17:01:57 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,16 @@ bool	arg_intmaxcheck(char *sub_arg, int num)
 	return (true);
 }
 
+static	bool	same_argcomp_check(int subject, int char_num)
+{
+	if (char_num == 0 && ('0' > subject || \
+	'9' < subject) && subject != '-')
+		return (false);
+	else if (char_num != 0 && ('0' > subject || '9' < subject))
+		return (false);
+	return (true);
+}
+
 bool	argument_checker(int arg_num, char **argument)
 {
 	int		char_num;
@@ -46,15 +56,10 @@ bool	argument_checker(int arg_num, char **argument)
 	{
 		while (argument[arg_counter][char_num] != '\0')
 		{
-			subject = argument[arg_counter][char_num];
-			if (char_num == 0 && ('0' > subject || \
-			'9' < subject) && subject != '-')
-				return (false);
-			else if (char_num != 0 && ('0' > subject || '9' < subject))
+			if (same_argcomp_check(argument[arg_counter][char_num], char_num) == false)
 				return (false);
 			char_num++;
 		}
-		printf("%d\n", char_num);
 		if (char_num > 11)
 			return (false);
 		if (char_num >= 10 && arg_intmaxcheck(argument[arg_counter], char_num) == false)
