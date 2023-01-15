@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/13 18:15:25 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/15 11:25:27 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,6 +122,7 @@ size_t			obtain_wedgeposition(t_staccontent **list);
 
 //free
 bool			free_all_a(t_staccontent **a);
+bool			free_all_a_false(t_staccontent **a);
 
 //special arg
 bool			pt_argnum_sortpart(char **num_args_arrange);

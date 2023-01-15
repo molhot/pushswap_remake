@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:27:49 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/14 17:26:30 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/15 11:32:10 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,16 +69,15 @@ bool	push_swap(int arg_num, char **num_ch)
 	t_staccontent	**a;
 	t_staccontent	**b;
 
-	if (arg_num == 1 || argument_checker(arg_num, num_ch) == false)
+	if (arg_num == 1)
+		return (true);
+	if (argument_checker(arg_num, num_ch) == false)
 		return (false);
 	if (arg_num == 2 && ft_strchr(num_ch[1], ' ') != NULL)
 		return (pt_argnum_2(num_ch[1]));
 	a = insertelem_tostack(arg_num, num_ch, false);
-	if (duplication_checker(a) == false)
-	{
-		free_all_a(a);
-		return (false);
-	}
+	if (duplication_checker(a) == false && grasp_listlen(a) > (INT_MAX)*2)
+		return (free_all_a_false(a));
 	if ((*a)->next == (*a) || sortcheck(a) == true)
 		return (free_all_a(a));
 	b = list_initialization();

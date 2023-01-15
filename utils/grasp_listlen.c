@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:38:37 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/14 17:45:43 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/15 11:31:37 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ size_t	grasp_listlen(t_staccontent **sublist)
 	while (node != *sublist_alt)
 	{
 		len++;
+		if (len > (INT_MAX * 2))
+			return (len);
 		node = node->next;
 	}
 	return (len);
