@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:27:49 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/15 11:39:46 by user             ###   ########.fr       */
+/*   Updated: 2023/01/15 14:18:45 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ bool	push_swap(int arg_num, char **num_ch)
 	t_staccontent	**a;
 	t_staccontent	**b;
 
-	if (arg_num == 1)
+	if (arg_num == 1  && argument_checker(1, num_ch) == true)
 		return (true);
 	if (argument_checker(arg_num, num_ch) == false)
 		return (false);

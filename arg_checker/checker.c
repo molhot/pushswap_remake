@@ -3,14 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:28:43 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/13 14:47:34 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/15 14:25:40 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+bool	arg_intmaxcheck(char *sub_arg, int num)
+{
+	int		position;
+	int		atoi_num;
+	char	*num_string;
+
+	position = 0;
+	if (num == 11 && sub_arg[0] != '-')
+		return (false);
+	atoi_num = ft_atoi(sub_arg);
+	num_string = ft_itoa(atoi_num);
+	while (sub_arg[position] != '\0')
+	{
+		if (sub_arg[position] != num_string[position])
+			return (false);
+		position++;
+	}
+	return (true);
+}
 
 bool	argument_checker(int arg_num, char **argument)
 {
@@ -34,6 +54,11 @@ bool	argument_checker(int arg_num, char **argument)
 				return (false);
 			char_num++;
 		}
+		printf("char num > %d\n", char_num);
+		if (char_num > 11)
+			return (false);
+		if (char_num == 11 && arg_intmaxcheck(argument[arg_counter], char_num) == false)
+			return (false);
 		arg_counter++;
 		char_num = 0;
 	}

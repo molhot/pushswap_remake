@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/15 11:25:27 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/15 14:27:06 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,9 @@ typedef struct stac
 char			**ft_split(char const *s, char c);
 char			*ft_strchr(const char *s, int c);
 size_t			ft_strlen(const char *string_row);
+char			*ft_itoa(int n);
+char			*ft_strdup(const char *s);
+bool			arg_intmaxcheck(char *sub_arg, int num);
 
 //reverserotation
 void			reversrotation(t_staccontent **subject);

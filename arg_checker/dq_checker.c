@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dq_checker.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:29:17 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/13 18:17:05 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/15 14:26:37 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,10 @@ bool	digit_or_not(char *arg)
 		}
 		position++;
 	}
+	if (position > 11)
+		return (false);
+	if (position == 11 && arg_intmaxcheck(arg, position) == false)
+		return (false);
 	return (true);
 }
 
