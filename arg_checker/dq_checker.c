@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:29:17 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/15 14:26:37 by user             ###   ########.fr       */
+/*   Updated: 2023/01/15 16:48:35 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,10 @@ bool	digit_or_not(char *arg)
 		}
 		position++;
 	}
+	printf("%ld\n", position);
 	if (position > 11)
 		return (false);
-	if (position == 11 && arg_intmaxcheck(arg, position) == false)
+	if (position >= 10 && arg_intmaxcheck(arg, position) == false)
 		return (false);
 	return (true);
 }

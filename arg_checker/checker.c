@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:28:43 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/15 14:25:40 by user             ###   ########.fr       */
+/*   Updated: 2023/01/15 16:48:27 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,10 @@ bool	argument_checker(int arg_num, char **argument)
 				return (false);
 			char_num++;
 		}
-		printf("char num > %d\n", char_num);
+		printf("%d\n", char_num);
 		if (char_num > 11)
 			return (false);
-		if (char_num == 11 && arg_intmaxcheck(argument[arg_counter], char_num) == false)
+		if (char_num >= 10 && arg_intmaxcheck(argument[arg_counter], char_num) == false)
 			return (false);
 		arg_counter++;
 		char_num = 0;
