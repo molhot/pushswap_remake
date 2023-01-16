@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:28:43 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/16 12:52:38 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/16 19:40:41 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ bool	arg_intmaxcheck(char *sub_arg, int num)
 bool	same_argcomp_check(int subject, int char_num)
 {
 	if (char_num == 0 && ('0' > subject || \
-	'9' < subject) && subject != '-')
+	'9' < subject) && subject != '-' && subject != '+')
 		return (false);
 	else if (char_num != 0 && ('0' > subject || '9' < subject))
 		return (false);

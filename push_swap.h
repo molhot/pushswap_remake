@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/15 22:47:20 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/16 20:25:12 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,5 +134,8 @@ bool			free_all_a_false(t_staccontent **a);
 bool			pt_argnum_sortpart(char **num_args_arrange);
 bool			pt_argnum_2(char *num_args);
 void			free_protect_args(char **args);
+
+//less three
+bool			pt_less_three(t_staccontent **a, t_staccontent **b);
 
 #endif
