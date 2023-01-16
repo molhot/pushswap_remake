@@ -12,7 +12,7 @@ SRCS = arg_checker/checker.c arg_checker/dq_checker.c arg_checker/dq_checker_hel
 
 OBJS = $(SRCS:.c=.o)
 
-CC = gcc -fsanitize=address -fno-omit-frame-pointer -Wall -Wextra -Werror
+CC = gcc -fsanitize=address -fno-omit-frame-pointer
 
 all : $(NAME)
 

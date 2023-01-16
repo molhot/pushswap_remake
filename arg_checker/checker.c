@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:28:43 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/15 22:42:59 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/16 12:52:38 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,13 @@ bool	arg_intmaxcheck(char *sub_arg, int num)
 	while (sub_arg[position] != '\0')
 	{
 		if (sub_arg[position] != num_string[position])
+		{
+			free (num_string);
 			return (false);
+		}
 		position++;
 	}
+	free(num_string);
 	return (true);
 }
 
