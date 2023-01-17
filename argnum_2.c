@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 18:05:57 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/16 20:31:55 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/17 22:59:57 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ bool	pt_argnum_sortpart(char **num_args_arrange)
 	free(*b);
 	(*b) = NULL;
 	if (grasp_listlen(a) == 2 || grasp_listlen(a) == 3)
-		return (pt_less_three(a,b));
+		return (pt_less_three(a, b));
 	if (grasp_listlen(a) == 4 || grasp_listlen(a) == 5)
 		return (pt_less_five(a, b));
 	else

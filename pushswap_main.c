@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:27:49 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/16 20:53:50 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/17 23:00:04 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ bool	push_swap(int arg_num, char **num_ch)
 	free(*b);
 	(*b) = NULL;
 	if (grasp_listlen(a) == 2 || grasp_listlen(a) == 3)
-		return (pt_less_three(a,b));
+		return (pt_less_three(a, b));
 	if (grasp_listlen(a) == 4 || grasp_listlen(a) == 5)
 		return (pt_less_five(a, b));
 	else
