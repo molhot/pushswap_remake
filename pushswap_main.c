@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:27:49 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/19 15:17:36 by user             ###   ########.fr       */
+/*   Updated: 2023/01/19 15:18:20 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,5 @@ int	main(int argc, char **argv)
 {
 	if (false == push_swap(argc, argv))
 		error_show();
-	return (1);
+	return (0);
 }
