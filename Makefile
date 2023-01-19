@@ -13,7 +13,7 @@ SRCS = arg_checker/checker.c arg_checker/dq_checker.c arg_checker/dq_checker_hel
 
 OBJS = $(SRCS:.c=.o)
 
-CC = gcc -Wall -Werror -Wextra
+CC = cc -Wall -Werror -Wextra
 
 all : $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 20:05:08 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/17 22:59:37 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/19 18:48:51 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ bool	pt_less_three_helper(t_staccontent **a)
 	if ((*a)->next->num > (*a)->next->next->num && \
 	(*a)->next->next->num > (*a)->num)
 	{
-		push_swap_ra(a);
-		push_swap_rra(a);
 		push_swap_rra(a);
 		push_swap_sa(a);
 	}
