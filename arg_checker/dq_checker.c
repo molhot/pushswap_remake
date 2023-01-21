@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:29:17 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/17 23:00:26 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/22 00:21:46 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ bool	checker_argnum(char *arg)
 	splited_arg = ft_split(arg, ' ');
 	if (same_argchecker(splited_arg) == false)
 		digit_check = false;
-	while (splited_arg[arg_position] != NULL)
+	while (splited_arg != NULL && splited_arg[arg_position] != NULL)
 	{
 		free(splited_arg[arg_position]);
 		arg_position++;
