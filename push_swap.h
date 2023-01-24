@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/16 20:25:12 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/24 23:19:15 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ size_t			ft_strlen(const char *string_row);
 char			*ft_itoa(int n);
 char			*ft_strdup(const char *s);
 bool			arg_intmaxcheck(char *sub_arg, int num);
+int				average(t_staccontent **sublist);
 
 //reverserotation
 void			reversrotation(t_staccontent **subject);
@@ -109,6 +110,7 @@ t_staccontent **b, int b_mediam);
 void			sort_to_wedge(t_staccontent **a, t_staccontent **b);
 void			less_three_sort(t_staccontent **a, t_staccontent **b);
 void			anum_twopt(t_staccontent **a, t_staccontent **b);
+bool 			obtain_minimumnum_by_wedge(t_staccontent **list);
 
 //minimumsort
 bool			pt_less_five(t_staccontent **a, t_staccontent **b);
@@ -137,5 +139,6 @@ void			free_protect_args(char **args);
 
 //less three
 bool			pt_less_three(t_staccontent **a, t_staccontent **b);
+bool			obtain_minimumnum(t_staccontent **sublist);
 
 #endif

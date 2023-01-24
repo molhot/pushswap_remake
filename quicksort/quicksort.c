@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 04:03:23 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/15 22:51:42 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/24 23:09:33 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	quick_sort_main(t_staccontent **a, t_staccontent **b)
 	{
 		while (b_len > 3)
 		{
-			more_threenum(a, b, mediam(b));
+			more_threenum(a, b, average(b));
 			b_len = grasp_listlen(b);
 		}
 		less_threenum(a, b);
@@ -45,6 +45,18 @@ void	f_step_sort_towedge(t_staccontent **a, t_staccontent **b)
 	wedge_is_exist = wedge_in_a(a);
 	while (wedge_is_exist == true)
 	{
+		if ((*a)->num > (*a)->next->num && (*a)->next->sorted != true)
+			push_swap_sa(a);
+		while (obtain_minimumnum_by_wedge(a) == true)
+		{
+			(*a)->sorted = true;
+			(*a)->wedge = false;
+			push_swap_ra(a);
+			if (wedge_in_a(a) == false)
+				return ;
+		}
+		if (wedge_in_a(a) == false)
+			return ;
 		sort_to_wedge(a, b);
 		wedge_is_exist = wedge_in_a(a);
 	}
@@ -82,7 +94,7 @@ void	more_threenum(t_staccontent **a, t_staccontent **b, int b_mediam)
 	b_len = grasp_listlen(b);
 	while (b_len != 0)
 	{
-		if ((*b)->num >= b_mediam)
+		if ((*b)->num > b_mediam)
 		{
 			if (f_moved == true)
 			{
