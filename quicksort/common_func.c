@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 06:21:23 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/24 23:29:43 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/24 23:35:18 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,7 +131,7 @@ void	sort_to_wedge(t_staccontent **a, t_staccontent **b)
 	}
 	else if (obtain_wedgeposition(a) == 3)
 		sort_to_wedge_pt3(a, b, (*a)->next->num, (*a)->next->next->num);
-	else if (obtain_wedgeposition(a) < 20)
+	else if (obtain_wedgeposition(a) < 100)
 		wedge_position_under_six(a, b);
 	else
 		wedge_position_over_six(a, b);
