@@ -13,12 +13,17 @@ SRCS = arg_checker/checker.c arg_checker/dq_checker.c arg_checker/dq_checker_hel
 
 OBJS = $(SRCS:.c=.o)
 
-CC = cc -Wall -Werror -Wextra
+CC = cc
+
+FLAG = -Wall -Werror -Wextra
 
 all : $(NAME)
 
 $(NAME):$(OBJS)
-	$(CC) $(SRCS) -o $(NAME)
+	$(CC) $(FLAG) $(SRCS) -o $(NAME)
+
+debug:$(OBJS)
+	$(CC) $(FLAG) -fsanitize=address -fno-omit-frame-pointer $(SRCS) -o $(NAME)
 
 clean:
 	rm -f $(OBJS)

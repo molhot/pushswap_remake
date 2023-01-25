@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/24 23:19:15 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/25 12:26:10 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,5 +140,6 @@ void			free_protect_args(char **args);
 //less three
 bool			pt_less_three(t_staccontent **a, t_staccontent **b);
 bool			obtain_minimumnum(t_staccontent **sublist);
+bool			obtain_minimumnum_nextnode(t_staccontent **sublist);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:38:37 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/24 23:19:03 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/25 12:25:34 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,6 +113,32 @@ bool	obtain_minimumnum(t_staccontent **sublist)
 	{
 		if (tmp > node->num)
 			return (false);
+		node = node->next;
+	}
+	return (true);
+}
+
+bool	obtain_minimumnum_nextnode(t_staccontent **sublist)
+{
+	t_staccontent	*f_node;
+	t_staccontent	*node;
+	int				tmp;
+
+	f_node = *sublist;
+	node = (*sublist)->next->next;
+	tmp = (*sublist)->next->num;
+	if (tmp > (*sublist)->num)
+	{
+		*sublist = f_node;
+		return (false);
+	}
+	while (node != f_node)
+	{
+		if (tmp > node->num)
+		{
+			*sublist = f_node;
+			return (false);
+		}
 		node = node->next;
 	}
 	return (true);

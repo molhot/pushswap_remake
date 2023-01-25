@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 06:21:23 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/24 23:35:18 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/25 12:32:03 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,11 @@ void	wedge_position_under_six(t_staccontent **a, t_staccontent **b)
 	{
 		while (obtain_minimumnum(b) == true && grasp_listlen(b) > 3)
 			b_to_a_sorted(a, b);
+		while (obtain_minimumnum_nextnode(b) == true && grasp_listlen(b) > 3)
+		{
+			push_swap_sb(b);
+			b_to_a_sorted(a, b);
+		}
 		if (grasp_listlen(b) > 3)
 			more_threenum(a, b, average(b));
 		b_len = grasp_listlen(b);
@@ -131,10 +136,10 @@ void	sort_to_wedge(t_staccontent **a, t_staccontent **b)
 	}
 	else if (obtain_wedgeposition(a) == 3)
 		sort_to_wedge_pt3(a, b, (*a)->next->num, (*a)->next->next->num);
-	else if (obtain_wedgeposition(a) < 100)
+	else//if (obtain_wedgeposition(a) < 60)
 		wedge_position_under_six(a, b);
-	else
-		wedge_position_over_six(a, b);
+	//else
+		//wedge_position_over_six(a, b);
 }
 
 bool obtain_minimumnum_by_wedge(t_staccontent **list)
