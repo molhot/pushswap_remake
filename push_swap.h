@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/25 12:26:10 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/25 21:06:44 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ t_staccontent **b, int b_mediam);
 void			sort_to_wedge(t_staccontent **a, t_staccontent **b);
 void			less_three_sort(t_staccontent **a, t_staccontent **b);
 void			anum_twopt(t_staccontent **a, t_staccontent **b);
-bool 			obtain_minimumnum_by_wedge(t_staccontent **list);
+bool			obtain_minimumnum_by_wedge(t_staccontent **list);
 
 //minimumsort
 bool			pt_less_five(t_staccontent **a, t_staccontent **b);

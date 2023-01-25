@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 08:38:45 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/24 23:30:22 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/25 21:10:10 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,4 @@ void	quicksort_secondstep(t_staccontent **a, t_staccontent **b)
 		(*a)->wedge = false;
 		push_swap_ra(a);
 	}
-	//show_node(a);
 }

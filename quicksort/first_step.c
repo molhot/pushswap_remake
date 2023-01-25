@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 06:08:42 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/25 17:16:07 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/25 21:09:58 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ void	quicksort_firststep(t_staccontent **a, t_staccontent **b)
 		}
 		else
 			push_swap_ra(a);
-		if ((tmp_listlen % 2 == 0 && (tmp_listlen / 2) == grasp_listlen(b)) || (tmp_listlen % 2 == 1 && (tmp_listlen / 2 + 1) == grasp_listlen(b)))
+		if ((tmp_listlen % 2 == 0 && (tmp_listlen / 2) == grasp_listlen(b)) \
+		|| (tmp_listlen % 2 == 1 && (tmp_listlen / 2 + 1) == grasp_listlen(b)))
 			return ;
 		listlen--;
 	}
@@ -70,7 +71,9 @@ void	divide_less_six(t_staccontent **a, t_staccontent **b)
 	{
 		half_listlen = listlen / 2;
 		b_mediam = average(b);
-		while (listlen != 0 && ((grasp_listlen(b) % 2 == 0 && grasp_listlen(b) != half_listlen) || (grasp_listlen(b) % 2 == 1 && grasp_listlen(b) != half_listlen + 1)))
+		while (listlen != 0 && ((grasp_listlen(b) % 2 == 0 && \
+		grasp_listlen(b) != half_listlen) || (grasp_listlen(b) % 2 \
+		== 1 && grasp_listlen(b) != half_listlen + 1)))
 		{
 			divide_less_six_helper(a, b, &wedge_flag, b_mediam);
 			listlen--;

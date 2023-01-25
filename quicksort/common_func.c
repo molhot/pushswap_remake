@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 06:21:23 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/25 17:57:47 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/25 21:09:33 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	sort_to_wedge(t_staccontent **a, t_staccontent **b)
 		wedge_position_under_six(a, b);
 }
 
-bool obtain_minimumnum_by_wedge(t_staccontent **list)
+bool	obtain_minimumnum_by_wedge(t_staccontent **list)
 {
 	t_staccontent	*f_node;
 	t_staccontent	*node;
