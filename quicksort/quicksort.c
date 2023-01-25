@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 04:03:23 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/25 16:46:50 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/25 23:53:17 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,11 @@ void	f_step_sort_towedge(t_staccontent **a, t_staccontent **b)
 	while (wedge_is_exist == true)
 	{
 		if ((*a)->num > (*a)->next->num && (*a)->next->sorted != true)
+		{
+			if ((*a)->next->wedge == true)
+				(*a)->wedge = true;
 			push_swap_sa(a);
+		}
 		while (obtain_minimumnum_by_wedge(a) == true)
 		{
 			(*a)->sorted = true;

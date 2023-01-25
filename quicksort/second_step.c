@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 08:38:45 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/25 22:45:58 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/26 00:03:59 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ void	quicksort_secondstep(t_staccontent **a, t_staccontent **b)
 {
 	not_sorted_num(a, b);
 	secondstep_helper(a, b);
+	if (grasp_listlen(a) == 6 && grasp_listlen(b) == 0)
+		return ;
 	f_step_sort_towedge(a, b);
 	if ((*a)->next->sorted == true && (*a)->num > (*a)->next->num)
 	{

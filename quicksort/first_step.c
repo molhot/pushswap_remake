@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 06:08:42 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/25 21:24:39 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/26 00:08:02 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	divide_less_six(t_staccontent **a, t_staccontent **b)
 
 	listlen = grasp_listlen(b);
 	wedge_flag = 1;
-	while (listlen > 6)
+	while (listlen > 3)
 	{
 		half_listlen = listlen / 2;
 		b_mediam = average(b);
