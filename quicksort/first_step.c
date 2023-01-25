@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 06:08:42 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/25 21:09:58 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/25 21:24:39 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,8 @@ void	quicksort_firststep(t_staccontent **a, t_staccontent **b)
 			pb(a, b);
 			b_mediam = average(b);
 			if (grasp_listlen(b) != 1)
-			{
 				if (b_mediam >= (*b)->num && (*a)->num > average(a))
 					push_swap_rr(a, b);
-			}
 		}
 		else
 			push_swap_ra(a);
