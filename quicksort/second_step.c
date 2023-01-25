@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 08:38:45 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/25 21:10:10 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/25 22:45:58 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,10 @@ static	void	not_sorted_num(t_staccontent **a, t_staccontent **b)
 	}
 }
 
-void	quicksort_secondstep(t_staccontent **a, t_staccontent **b)
+void	secondstep_helper(t_staccontent **a, t_staccontent **b)
 {
 	size_t	b_len;
 
-	not_sorted_num(a, b);
 	b_len = grasp_listlen(b);
 	while (b_len > 5)
 	{
@@ -48,6 +47,12 @@ void	quicksort_secondstep(t_staccontent **a, t_staccontent **b)
 		}
 		less_threenum(a, b);
 	}
+}
+
+void	quicksort_secondstep(t_staccontent **a, t_staccontent **b)
+{
+	not_sorted_num(a, b);
+	secondstep_helper(a, b);
 	f_step_sort_towedge(a, b);
 	if ((*a)->next->sorted == true && (*a)->num > (*a)->next->num)
 	{
