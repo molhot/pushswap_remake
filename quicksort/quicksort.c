@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 04:03:23 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/24 23:09:33 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/25 16:46:50 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,10 +108,3 @@ void	more_threenum(t_staccontent **a, t_staccontent **b, int b_mediam)
 		b_len--;
 	}
 }
-
-//for check func
-// printf("---------\n");
-// show_node(a);
-// printf("---------\n");
-// show_node(b);
-// printf("---------\n");
