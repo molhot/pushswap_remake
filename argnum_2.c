@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   argnum_2.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 18:05:57 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/22 00:29:30 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 03:13:31 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ bool	pt_argnum_sortpart(char **num_args_arrange)
 		return (false);
 	a = insertelem_tostack(arg_counter, num_args_arrange, true);
 	if (duplication_checker(a) == false)
-		return (false);
+		return (free_all_a_false(a));
 	if ((*a)->next == (*a) || sortcheck(a) == true)
 		return (free_all_a(a));
 	b = list_initialization();

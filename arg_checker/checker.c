@@ -6,7 +6,7 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:28:43 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/28 02:33:08 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 02:57:00 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ bool	same_argcomp_check(char *subject_s, int subject, int char_num)
 {
 	if (char_num == 0 && ('0' > subject || \
 	'9' < subject) && subject != '-' && subject != '+')
+		return (false);
+	else if (char_num == 0 && (subject == '-' || subject == '+') && subject_s[char_num + 1] == '\0')
 		return (false);
 	else if (char_num == 0 && (subject == '-' || subject == '+') && subject_s[char_num + 1] == '\0')
 		return (false);
