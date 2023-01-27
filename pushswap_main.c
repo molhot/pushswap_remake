@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pushswap_main.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:27:49 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/25 23:58:33 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 02:03:03 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,6 @@ int	main(int argc, char **argv)
 {
 	if (false == push_swap(argc, argv))
 		error_show();
+	system("leaks -q push_swap");
 	return (0);
 }

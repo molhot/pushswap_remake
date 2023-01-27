@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/25 21:06:44 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 02:12:53 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ bool			argument_checker(int arg_num, char **argument);
 bool			split_or_return(int argc, char **argnum);
 bool			digit_or_not(char *arg);
 bool			same_argcomp_check2(int sub, int position);
-bool			same_argcomp_check(int subject, int char_num);
+bool			same_argcomp_check(char *subject_s, int subject, int char_num);
 
 //two_or_threepattern
 void			patt_threenum_in_b(t_staccontent **list);

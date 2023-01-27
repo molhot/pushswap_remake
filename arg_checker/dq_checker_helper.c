@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dq_check.c                                         :+:      :+:    :+:   */
+/*   dq_checker_helper.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 22:34:12 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/15 22:34:42 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 02:36:32 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@ bool	digit_or_not(char *arg)
 	char	sub;
 
 	position = 0;
+	while (*arg == '0')
+		arg++;
 	while (arg[position] != '\0')
 	{
 		sub = arg[position];
-		if (same_argcomp_check(sub, position) == false)
+		if (same_argcomp_check(arg, sub, position) == false)
 			return (false);
 		position++;
 	}

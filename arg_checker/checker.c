@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:28:43 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/22 00:43:38 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 02:33:08 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,12 @@ bool	arg_intmaxcheck(char *sub_arg, int num)
 	return (true);
 }
 
-bool	same_argcomp_check(int subject, int char_num)
+bool	same_argcomp_check(char *subject_s, int subject, int char_num)
 {
 	if (char_num == 0 && ('0' > subject || \
 	'9' < subject) && subject != '-' && subject != '+')
+		return (false);
+	else if (char_num == 0 && (subject == '-' || subject == '+') && subject_s[char_num + 1] == '\0')
 		return (false);
 	else if (char_num != 0 && ('0' > subject || '9' < subject))
 		return (false);
@@ -59,9 +61,11 @@ bool	argument_checker(int arg_num, char **argument)
 	while (arg_counter != arg_num)
 	{
 		subject = argument[arg_counter];
+		while (*subject == '0')
+			subject++;
 		while (subject[char_num] != '\0')
 		{
-			if (same_argcomp_check(subject[char_num], char_num) == false)
+			if (same_argcomp_check(subject, subject[char_num], char_num) == false)
 				return (false);
 			char_num++;
 		}

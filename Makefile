@@ -18,10 +18,13 @@ CC = cc
 
 FLAG = -Wall -Werror -Wextra
 
+.SUFFIXES:
+.SUFFIXES: .c .o
+
 all : $(NAME)
 
 $(NAME):$(OBJS)
-	$(CC) $(FLAG) $() -o $(NAME)
+	$(CC) $(FLAG) $(OBJS) -o $(NAME)
 
 debug:$(OBJS)
 	$(CC) $(FLAG) -fsanitize=address -fno-omit-frame-pointer $(SRCS) -o $(NAME)

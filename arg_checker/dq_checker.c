@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dq_checker.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:29:17 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/22 00:21:46 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 02:33:57 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,26 +32,6 @@ bool	same_argcomp_check2(int sub, int position)
 	}
 	return (true);
 }
-
-// bool	digit_or_not(char *arg)
-// {
-// 	size_t	position;
-// 	char	sub;
-
-// 	position = 0;
-// 	while (arg[position] != '\0')
-// 	{
-// 		sub = arg[position];
-// 		if (same_argcomp_check(sub, position) == false)
-// 			return (false);
-// 		position++;
-// 	}
-// 	if (position > 11)
-// 		return (false);
-// 	if (position >= 10 && arg_intmaxcheck(arg, position) == false)
-// 		return (false);
-// 	return (true);
-// }
 
 bool	same_argchecker(char **arg)
 {
