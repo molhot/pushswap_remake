@@ -6,7 +6,7 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/28 02:12:53 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 04:39:02 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ bool			split_or_return(int argc, char **argnum);
 bool			digit_or_not(char *arg);
 bool			same_argcomp_check2(int sub, int position);
 bool			same_argcomp_check(char *subject_s, int subject, int char_num);
+bool			argment_checker_help(int char_num, char *subject);
 
 //two_or_threepattern
 void			patt_threenum_in_b(t_staccontent **list);
