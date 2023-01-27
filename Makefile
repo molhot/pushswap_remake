@@ -21,7 +21,7 @@ FLAG = -Wall -Werror -Wextra
 all : $(NAME)
 
 $(NAME):$(OBJS)
-	$(CC) $(FLAG) $(SRCS) -o $(NAME)
+	$(CC) $(FLAG) $() -o $(NAME)
 
 debug:$(OBJS)
 	$(CC) $(FLAG) -fsanitize=address -fno-omit-frame-pointer $(SRCS) -o $(NAME)
