@@ -6,33 +6,55 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:28:43 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/28 05:17:26 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 07:14:04 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-bool	arg_intmaxcheck(char *sub_arg, int num)
+bool	arg_intmax_help(char *sub, char *num_string, int position)
 {
-	int		position;
-	int		atoi_num;
-	char	*num_string;
+	int	itoa_position;
 
-	position = 0;
-	if (num == 11 && sub_arg[0] != '-')
-		return (false);
-	atoi_num = ft_atoi(sub_arg);
-	num_string = ft_itoa(atoi_num);
-	while (sub_arg[position] != '\0')
+	if (num_string[0] == '-')
+		itoa_position = 1;
+	else
+		itoa_position = 0;
+	while (sub[position] != '\0')
 	{
-		if (sub_arg[position] != num_string[position])
+		if (sub[position] != num_string[itoa_position])
 		{
 			free (num_string);
 			return (false);
 		}
 		position++;
+		itoa_position++;
 	}
 	free(num_string);
+	return (true);
+}
+
+bool	arg_intmaxcheck(char *sub_arg, int num)
+{
+	int		itoa_position;
+	int		atoi_num;
+	char	*num_string;
+	bool	p_t;
+
+	if (num == 11 && sub_arg[0] != '-')
+		return (false);
+	atoi_num = ft_atoi(sub_arg);
+	num_string = ft_itoa(atoi_num);
+	if (sub_arg[0] == '+' || sub_arg[0] == '-')
+	{
+		if (sub_arg[0] == '-' && sub_arg[0] != num_string[0])
+			return (false);
+		sub_arg++;
+	}
+	while (*sub_arg == '0')
+		sub_arg++;
+	if (arg_intmax_help(sub_arg, num_string, 0) == false)
+		return (false);
 	return (true);
 }
 
