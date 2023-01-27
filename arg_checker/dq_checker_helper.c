@@ -6,7 +6,7 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 22:34:12 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/28 07:05:04 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 08:42:49 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,23 +33,8 @@ static	bool	digit_or_not_helper(size_t *position, bool c_n_f, char *arg)
 
 bool	digit_or_not(char *arg)
 {
-	size_t	position;
-	bool	checker_notf;
-	size_t	zero_p;
-	char	sub;
-
-	position = 0;
-	checker_notf = true;
-	while (*arg == '0')
-	{
-		arg++;
-		checker_notf = false;
-	}
-	if (digit_or_not_helper(&position, checker_notf, arg) == false)
+	if (itoa_checker(arg) == false)
 		return (false);
-	if (position > 11)
-		return (false);
-	if (position >= 10 && arg_intmaxcheck(arg, position) == false)
-		return (false);
-	return (true);
+	else
+		return (true);
 }

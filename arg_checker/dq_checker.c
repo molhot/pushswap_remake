@@ -6,7 +6,7 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:29:17 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/28 04:54:19 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 08:41:58 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,7 @@ bool	checker_argnum(char *arg)
 	if (arg[0] == '\0')
 		return (false);
 	if (space_checker(arg) == false)
-	{
-		if (digit_or_not(arg) == false)
-			return (false);
-		else
-			return (true);
-	}
+		return (digit_or_not(arg));
 	splited_arg = ft_split(arg, ' ');
 	if (same_argchecker(splited_arg) == false)
 		digit_check = false;

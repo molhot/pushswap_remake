@@ -1,7 +1,7 @@
 NAME = push_swap
 
 SRCS = arg_checker/checker.c arg_checker/checker_helper.c arg_checker/dq_checker.c arg_checker/dq_checker_helper.c\
-		operation/push.c operation/rotation_reverse.c operation/rotation.c operation/swap.c\
+		operation/push.c operation/rotation_reverse.c operation/rotation.c operation/swap.c arg_checker/itoa_check.c\
 		pattern_two_three/three_p.c pattern_two_three/three_p_help.c pattern_two_three/two_p.c\
 		quicksort/quicksort.c quicksort/common_func.c quicksort/first_step.c quicksort/sort_to_wedge_helper.c\
 		quicksort/second_step.c\

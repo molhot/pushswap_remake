@@ -6,73 +6,11 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:28:43 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/28 07:14:04 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 08:39:42 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
-bool	arg_intmax_help(char *sub, char *num_string, int position)
-{
-	int	itoa_position;
-
-	if (num_string[0] == '-')
-		itoa_position = 1;
-	else
-		itoa_position = 0;
-	while (sub[position] != '\0')
-	{
-		if (sub[position] != num_string[itoa_position])
-		{
-			free (num_string);
-			return (false);
-		}
-		position++;
-		itoa_position++;
-	}
-	free(num_string);
-	return (true);
-}
-
-bool	arg_intmaxcheck(char *sub_arg, int num)
-{
-	int		itoa_position;
-	int		atoi_num;
-	char	*num_string;
-	bool	p_t;
-
-	if (num == 11 && sub_arg[0] != '-')
-		return (false);
-	atoi_num = ft_atoi(sub_arg);
-	num_string = ft_itoa(atoi_num);
-	if (sub_arg[0] == '+' || sub_arg[0] == '-')
-	{
-		if (sub_arg[0] == '-' && sub_arg[0] != num_string[0])
-			return (false);
-		sub_arg++;
-	}
-	while (*sub_arg == '0')
-		sub_arg++;
-	if (arg_intmax_help(sub_arg, num_string, 0) == false)
-		return (false);
-	return (true);
-}
-
-bool	same_argcomp_check(char *subject_s, int subject, int char_num)
-{
-	if (char_num == 0 && ('0' > subject || '9' < subject) \
-	&& subject != '-' && subject != '+')
-		return (false);
-	else if (char_num == 0 && (subject == '-' || subject == '+') \
-	&& subject_s[char_num + 1] == '\0')
-		return (false);
-	else if (char_num == 0 && (subject == '-' || subject == '+') \
-	&& subject_s[char_num + 1] == '\0')
-		return (false);
-	else if (char_num != 0 && ('0' > subject || '9' < subject))
-		return (false);
-	return (true);
-}
 
 bool	argument_checker(int arg_num, char **argument)
 {
@@ -87,20 +25,38 @@ bool	argument_checker(int arg_num, char **argument)
 	while (arg_counter != arg_num)
 	{
 		subject = argument[arg_counter];
-		while (*subject == '0')
-			subject++;
-		while (subject[char_num] != '\0')
-		{
-			if (same_argcomp_check(subject, \
-			subject[char_num], char_num) == false)
-				return (false);
-			char_num++;
-		}
-		if (argment_checker_help(char_num, subject) == false)
+		if (itoa_checker(subject) == false)
+			return (false);
+		if (arg_overintmaxcheck(subject) == false)
 			return (false);
 		arg_counter++;
 		char_num = 0;
 	}
+	return (true);
+}
+
+bool	arg_overintmaxcheck(char *sub_arg)
+{
+	int		atoi_num;
+	char	*num_string;
+	bool	p_t;
+	int		position;
+
+	atoi_num = ft_atoi(sub_arg);
+	num_string = ft_itoa(atoi_num);
+	position = 0;
+	while (*sub_arg == '+' || *sub_arg == '-' || *sub_arg == '0')
+		sub_arg++;
+	while (sub_arg[position] != '\0')
+	{
+		if (sub_arg[position] != num_string[position])
+		{
+			free (num_string);
+			return (false);
+		}
+		position++;
+	}
+	free(num_string);
 	return (true);
 }
 
