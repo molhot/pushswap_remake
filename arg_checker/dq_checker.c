@@ -6,7 +6,7 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:29:17 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/28 02:33:57 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 04:11:41 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ bool	checker_argnum(char *arg)
 
 	arg_position = 0;
 	digit_check = true;
+	if (arg[0] == '\0')
+		return (false);
 	if (space_checker(arg) == false)
 	{
 		if (digit_or_not(arg) == false)
