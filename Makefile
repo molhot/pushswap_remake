@@ -12,19 +12,16 @@ SRCS = arg_checker/checker.c arg_checker/itoa_check.c arg_checker/dq_checker.c\
 		arg_lessthree.c\
 		pushswap_main.c sort_num_arrange.c free_a.c less_five.c less_five_sorthelper.c argnum_2.c
 
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRCS:%.c=%.o)
 
 CC = cc
 
-FLAG = -Wall -Werror -Wextra
-
-.SUFFIXES:
-.SUFFIXES: .c .o
+CFLAGS = -Wall -Werror -Wextra
 
 all : $(NAME)
 
 $(NAME):$(OBJS)
-	$(CC) $(FLAG) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 debug:$(OBJS)
 	$(CC) $(FLAG) -fsanitize=address -fno-omit-frame-pointer $(SRCS) -o $(NAME)
