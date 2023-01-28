@@ -6,7 +6,7 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:29:17 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/28 08:47:44 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 09:08:17 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,6 @@ bool	space_checker(char *arg)
 		return (false);
 	else
 		return (true);
-}
-
-bool	same_argcomp_check2(int sub, int position)
-{
-	if (position == 0 && (sub != '-' && \
-	!('0' <= sub && sub <= '9') && sub != '+'))
-		return (false);
-	else if (position != 0)
-	{
-		if (!('0' <= sub && sub <= '9'))
-			return (false);
-	}
-	return (true);
 }
 
 bool	same_argchecker(char **arg)
