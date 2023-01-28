@@ -6,11 +6,19 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:29:17 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/28 09:08:17 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 09:14:43 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+bool	digit_or_not(char *arg)
+{
+	if (itoa_checker(arg) == false)
+		return (false);
+	else
+		return (true);
+}
 
 bool	space_checker(char *arg)
 {
