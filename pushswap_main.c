@@ -6,7 +6,7 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:27:49 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/28 04:50:59 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 09:24:14 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,6 @@ int	main(int argc, char **argv)
 {
 	if (false == push_swap(argc, argv))
 		error_show();
-	//system("leaks -q push_swap");
+	system("leaks -q push_swap");
 	return (0);
 }
