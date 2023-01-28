@@ -6,7 +6,7 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:29:17 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/28 09:14:43 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 09:44:12 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,17 @@ bool	checker_argnum(char *arg)
 	bool	digit_check;
 	char	**splited_arg;
 
+	printf("%s\n", arg);
 	arg_position = 0;
 	digit_check = true;
 	if (arg[0] == '\0')
 		return (false);
 	if (space_checker(arg) == false)
-		return (digit_or_not(arg));
+	{
+		if (digit_or_not(arg) == false || arg_overintmaxcheck(arg) == false)
+			return (false);
+		return (true);
+	}
 	splited_arg = ft_split(arg, ' ');
 	if (same_argchecker(splited_arg) == false)
 		digit_check = false;
