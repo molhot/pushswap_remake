@@ -6,7 +6,7 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:28:43 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/28 08:39:42 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 09:00:31 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,24 +37,28 @@ bool	argument_checker(int arg_num, char **argument)
 
 bool	arg_overintmaxcheck(char *sub_arg)
 {
-	int		atoi_num;
 	char	*num_string;
-	bool	p_t;
 	int		position;
+	int		itoa_position;
 
-	atoi_num = ft_atoi(sub_arg);
-	num_string = ft_itoa(atoi_num);
+	num_string = ft_itoa(ft_atoi(sub_arg));
 	position = 0;
+	itoa_position = 0;
+	if ((sub_arg[0] == '-' && num_string[0] != '-') || (sub_arg[0] == '+' && ft_isdigit(num_string[0]) == 0))
+		return (false);
+	if (sub_arg[0] == '-')
+		itoa_position++;
 	while (*sub_arg == '+' || *sub_arg == '-' || *sub_arg == '0')
 		sub_arg++;
 	while (sub_arg[position] != '\0')
 	{
-		if (sub_arg[position] != num_string[position])
+		if (sub_arg[position] != num_string[itoa_position])
 		{
 			free (num_string);
 			return (false);
 		}
 		position++;
+		itoa_position++;
 	}
 	free(num_string);
 	return (true);

@@ -6,7 +6,7 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/28 08:13:41 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 08:54:49 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ bool			same_argcomp_check(char *subject_s, int subject, int char_num);
 bool			argment_checker_help(int char_num, char *subject);
 bool			arg_intmax_help(char *sub, char *num_string, int position);
 bool			arg_overintmaxcheck(char *sub_arg);
+int 			ft_isdigit(int num);
 
 //two_or_threepattern
 void			patt_threenum_in_b(t_staccontent **list);
