@@ -6,7 +6,7 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:28:43 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/28 09:18:56 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 09:54:43 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,12 @@ bool	argument_checker(int arg_num, char **argument)
 	return (true);
 }
 
+static	bool	check_overintmax_free(char *numstring, bool judge)
+{
+	free (numstring);
+	return (judge);
+}
+
 bool	arg_overintmaxcheck(char *sub_arg)
 {
 	char	*num_string;
@@ -45,7 +51,7 @@ bool	arg_overintmaxcheck(char *sub_arg)
 	position = 0;
 	itoa_position = 0;
 	if ((sub_arg[0] == '-' && num_string[0] != '-') || (sub_arg[0] == '+' && ft_isdigit(num_string[0]) == 0))
-		return (false);
+		return (check_overintmax_free(num_string, false));
 	if (sub_arg[0] == '-')
 		itoa_position++;
 	while (*sub_arg == '+' || *sub_arg == '-' || *sub_arg == '0')
@@ -53,15 +59,11 @@ bool	arg_overintmaxcheck(char *sub_arg)
 	while (sub_arg[position] != '\0')
 	{
 		if (sub_arg[position] != num_string[itoa_position])
-		{
-			free (num_string);
-			return (false);
-		}
+			return (check_overintmax_free(num_string, false));
 		position++;
 		itoa_position++;
 	}
-	free(num_string);
-	return (true);
+	return (check_overintmax_free(num_string, true));
 }
 
 static	bool	dupli_or_not(int arrange_num, t_staccontent *a)
