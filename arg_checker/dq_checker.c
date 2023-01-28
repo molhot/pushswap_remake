@@ -6,7 +6,7 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:29:17 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/28 09:47:03 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/28 10:02:05 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ bool	same_argchecker(char **arg)
 	argposition = 0;
 	while (arg[argposition] != NULL)
 	{
-		if (digit_or_not(arg[argposition]) == false || arg_overintmaxcheck(arg[argposition]) == false)
+		if (digit_or_not(arg[argposition]) == false || \
+		arg_overintmaxcheck(arg[argposition]) == false)
 			return (false);
 		argposition++;
 	}
