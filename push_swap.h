@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:26:24 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/28 10:01:35 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/29 14:29:25 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ bool			argment_checker_help(int char_num, char *subject);
 bool			arg_intmax_help(char *sub, char *num_string, int position);
 bool			arg_overintmaxcheck(char *sub_arg);
 int				ft_isdigit(int num);
+bool			special_casecheck(char *string);
 
 //two_or_threepattern
 void			patt_threenum_in_b(t_staccontent **list);

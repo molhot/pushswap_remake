@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:28:43 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/28 10:01:52 by satushi          ###   ########.fr       */
+/*   Updated: 2023/01/29 14:32:41 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ bool	arg_overintmaxcheck(char *sub_arg)
 	num_string = ft_itoa(ft_atoi(sub_arg));
 	position = 0;
 	itoa_position = 0;
+	if (special_casecheck(sub_arg) == true)
+		return (check_overintmax_free(num_string, true));
 	if ((sub_arg[0] == '-' && num_string[0] != '-') || \
 	(sub_arg[0] == '+' && ft_isdigit(num_string[0]) == 0))
 		return (check_overintmax_free(num_string, false));
