@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 03:28:43 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/29 14:32:41 by user             ###   ########.fr       */
+/*   Updated: 2023/02/01 13:26:27 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 bool	argument_checker(int arg_num, char **argument)
 {
-	int		char_num;
 	int		arg_counter;
 	char	*subject;
 
-	char_num = 0;
 	arg_counter = 1;
 	if (arg_num == 2)
 		return (split_or_return(arg_num, argument));
@@ -30,7 +28,6 @@ bool	argument_checker(int arg_num, char **argument)
 		if (arg_overintmaxcheck(subject) == false)
 			return (false);
 		arg_counter++;
-		char_num = 0;
 	}
 	return (true);
 }

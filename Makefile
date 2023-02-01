@@ -24,7 +24,7 @@ $(NAME):$(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 debug:$(OBJS)
-	$(CC) $(FLAG) -fsanitize=address -fno-omit-frame-pointer $(SRCS) -o $(NAME)
+	$(CC) $(CFLAGS) -fsanitize=address -fno-omit-frame-pointer $(SRCS) -o $(NAME)
 
 clean:
 	rm -f $(OBJS)
